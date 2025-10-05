@@ -1,0 +1,501 @@
+id,breach_date,name,industry,country,records_exposed,breach_type,source_url
+1,2022-04-03,Credit 1 Ltd,Financial,US,1663419,Insider,https://krebsonsecurity.com/breach-0001
+2,2020-05-30,Clinic Corp,Healthcare,CA,172914,Insider,https://darkreading.com/breach-0002
+3,2021-12-30,Care 3 Group,Healthcare,FR,16634,Insider,https://darkreading.com/breach-0003
+4,2021-04-12,Hospital Inc,Healthcare,NO,219942,System Error,https://securityweek.com/breach-0004
+5,2021-10-20,Finance Inc,Financial,GB,275732,Insider,https://threatpost.com/breach-0005
+6,2020-05-23,Data Inc,Education,ES,24916,System Error,https://darkreading.com/breach-0006
+7,2021-12-03,Tech Ltd,Transportation,IN,479241,Insider,https://infosecurity-magazine.com/breach-0007
+8,2020-11-02,Shop 2 LLC,Retail,DK,186629,Social Engineering,https://cyberscoop.com/breach-0008
+9,2024-12-31,Cloud 1 Services,Education,IN,415533,Insider,https://cyberscoop.com/breach-0009
+10,2020-10-22,Systems Services,Media,CA,392115,Insider,https://infosecurity-magazine.com/breach-0010
+11,2020-12-13,Capital Corp,Financial,CN,239969,Hacking,https://cybernews.com/breach-0011
+12,2023-01-26,Trust 2 Ltd,Financial,CN,135685,Hacking,https://infosecurity-magazine.com/breach-0012
+13,2020-03-13,Data 2 Group,Manufacturing,US,50170,Insider,https://threatpost.com/breach-0013
+14,2024-11-21,Cloud Group,Technology,DK,622061,Insider,https://infosecurity-magazine.com/breach-0014
+15,2020-12-31,Cloud 1 Ltd,Manufacturing,FI,243494,Hacking,https://krebsonsecurity.com/breach-0015
+16,2023-12-06,Market Inc,Retail,CA,35836,System Error,https://therecord.media/breach-0016
+17,2022-09-29,Store International Inc,Retail,DK,49059,Hacking,https://bleepingcomputer.com/breach-0017
+18,2022-03-03,Health Global Ltd,Healthcare,NL,42928,Hacking,https://bleepingcomputer.com/breach-0018
+19,2020-03-03,Systems Corp,Manufacturing,CH,65718,System Error,https://krebsonsecurity.com/breach-0019
+20,2020-01-02,Software Group,Technology,NL,396500,Insider,https://cybernews.com/breach-0020
+21,2020-05-08,Cloud Corp,Manufacturing,DE,266544,Insider,https://therecord.media/breach-0021
+22,2020-04-14,Systems Inc,Transportation,FI,566448,System Error,https://securityweek.com/breach-0022
+23,2020-01-25,Tech Solutions,Media,BE,235568,Insider,https://infosecurity-magazine.com/breach-0023
+24,2020-11-02,Market Services,Retail,BR,119505,System Error,https://bleepingcomputer.com/breach-0024
+25,2020-05-25,Finance LLC,Financial,CH,76662,Unknown,https://darkreading.com/breach-0025
+26,2020-01-05,Systems Group,Media,FI,327253,Hacking,https://infosecurity-magazine.com/breach-0026
+27,2021-03-04,Market International Corp,Retail,BR,53999,Insider,https://therecord.media/breach-0027
+28,2021-05-15,Tech Inc,Transportation,SE,293952,System Error,https://cybernews.com/breach-0028
+29,2020-03-23,Data Systems,Technology,SE,475652,Hacking,https://infosecurity-magazine.com/breach-0029
+30,2024-12-31,Cloud Ltd,Transportation,SE,367241,Unknown,https://securityweek.com/breach-0030
+31,2022-07-31,Gov Solutions,Government,FR,330891,Social Engineering,https://infosecurity-magazine.com/breach-0031
+32,2020-06-02,Federal Solutions,Government,IN,52129,Physical,https://infosecurity-magazine.com/breach-0032
+33,2023-06-29,Care LLC,Healthcare,AU,64406,Social Engineering,https://cybernews.com/breach-0033
+34,2023-10-30,Credit International Group,Financial,NL,126505,Unknown,https://securityweek.com/breach-0034
+35,2020-02-14,Data Systems,Education,SE,207472,Insider,https://darkreading.com/breach-0035
+36,2020-05-09,Software LLC,Transportation,DE,93967,System Error,https://securityweek.com/breach-0036
+37,2021-07-21,Data Services,Energy,AT,370435,Unknown,https://threatpost.com/breach-0037
+38,2021-03-17,Trust 2 Systems,Financial,CN,146568,Hacking,https://krebsonsecurity.com/breach-0038
+39,2021-07-29,Retail Services,Retail,DK,98872,Physical,https://cyberscoop.com/breach-0039
+40,2021-10-11,Retail Inc,Retail,DE,6393,Physical,https://krebsonsecurity.com/breach-0040
+41,2024-02-27,Tech International Services,Transportation,IN,5302511,System Error,https://cybernews.com/breach-0041
+42,2020-12-25,Cloud Services,Energy,CH,2967778,Insider,https://therecord.media/breach-0042
+43,2020-12-18,Market 3 Ltd,Retail,BR,28405,Hacking,https://bleepingcomputer.com/breach-0043
+44,2020-09-01,Software International Solutions,Energy,SE,87766,Hacking,https://cyberscoop.com/breach-0044
+45,2024-10-06,Data Solutions,Manufacturing,US,762968,System Error,https://securityweek.com/breach-0045
+46,2020-07-13,Software Corp,Manufacturing,IN,840102,Social Engineering,https://threatpost.com/breach-0046
+47,2020-01-17,Software International Corp,Media,CH,62634,System Error,https://infosecurity-magazine.com/breach-0047
+48,2020-08-28,Shop Group,Retail,NO,160617,Hacking,https://cybernews.com/breach-0048
+49,2020-06-03,Health Corp,Healthcare,ES,7185,Hacking,https://therecord.media/breach-0049
+50,2020-04-21,Department Inc,Government,ES,64936,Insider,https://cyberscoop.com/breach-0050
+51,2020-02-18,Cloud Inc,Energy,JP,68050,System Error,https://krebsonsecurity.com/breach-0051
+52,2020-12-06,Data Inc,Education,CH,32708,Hacking,https://cyberscoop.com/breach-0052
+53,2022-01-17,Software LLC,Education,NO,597241,System Error,https://therecord.media/breach-0053
+54,2022-11-29,Systems Group,Manufacturing,SE,100258,System Error,https://cyberscoop.com/breach-0054
+55,2021-02-19,Data LLC,Education,US,142951,Insider,https://darkreading.com/breach-0055
+56,2021-03-18,Cloud International Inc,Transportation,US,184433,Insider,https://therecord.media/breach-0056
+57,2020-02-29,Cloud Solutions,Manufacturing,US,90360,Insider,https://infosecurity-magazine.com/breach-0057
+58,2020-09-01,Software Group,Energy,CH,38082,Insider,https://cybernews.com/breach-0058
+59,2020-05-28,Software Group,Technology,JP,1116924,Hacking,https://securityweek.com/breach-0059
+60,2020-09-29,State Corp,Government,IN,50958,Unknown,https://therecord.media/breach-0060
+61,2021-06-03,Capital Services,Financial,US,425792,Social Engineering,https://therecord.media/breach-0061
+62,2021-08-27,Bank Global LLC,Financial,AT,37624,Social Engineering,https://securityweek.com/breach-0062
+63,2020-12-30,Software Group,Transportation,NL,340422,Insider,https://securityweek.com/breach-0063
+64,2020-04-13,Federal International Inc,Government,CA,121703,Hacking,https://darkreading.com/breach-0064
+65,2020-02-14,Federal Group,Government,NO,282545,Social Engineering,https://bleepingcomputer.com/breach-0065
+66,2021-09-26,Data 2 LLC,Transportation,IN,690895,Physical,https://therecord.media/breach-0066
+67,2021-12-11,Capital Group,Financial,NO,98849,Insider,https://infosecurity-magazine.com/breach-0067
+68,2020-01-16,Cloud Corp,Media,BR,299739,Hacking,https://therecord.media/breach-0068
+69,2024-02-17,Cloud Solutions,Transportation,NO,196900,System Error,https://infosecurity-magazine.com/breach-0069
+70,2020-08-31,Capital Group,Financial,FR,49014,Hacking,https://infosecurity-magazine.com/breach-0070
+71,2020-03-15,Agency Corp,Government,IT,169893,Insider,https://therecord.media/breach-0071
+72,2020-05-18,Systems LLC,Manufacturing,GB,140680,Insider,https://securityweek.com/breach-0072
+73,2021-05-02,Systems 1 Solutions,Technology,CN,185559,Social Engineering,https://darkreading.com/breach-0073
+74,2020-11-22,Software Global Services,Transportation,BR,94172,Insider,https://threatpost.com/breach-0074
+75,2022-06-20,Capital Systems,Financial,BR,107677,Insider,https://therecord.media/breach-0075
+76,2021-04-15,Data Systems,Technology,NO,229318,Hacking,https://securityweek.com/breach-0076
+77,2020-06-10,Software Corp,Media,NL,117072,Insider,https://threatpost.com/breach-0077
+78,2020-03-23,Systems Systems,Manufacturing,GB,629707,System Error,https://krebsonsecurity.com/breach-0078
+79,2023-05-31,Cloud Inc,Technology,SE,675368,Insider,https://bleepingcomputer.com/breach-0079
+80,2020-10-17,Data Services,Education,CH,3442646,Unknown,https://bleepingcomputer.com/breach-0080
+81,2022-05-19,Tech 3 Services,Energy,AU,410460,Hacking,https://securityweek.com/breach-0081
+82,2021-05-22,Cloud Global LLC,Transportation,SE,1065516,Insider,https://threatpost.com/breach-0082
+83,2021-09-10,Shop Group,Retail,NO,269678,System Error,https://threatpost.com/breach-0083
+84,2024-11-03,Trust Group,Financial,NO,84100,Insider,https://cyberscoop.com/breach-0084
+85,2020-06-13,Systems Systems,Manufacturing,AU,82024,Insider,https://krebsonsecurity.com/breach-0085
+86,2022-12-24,Data Ltd,Media,DK,99596,Insider,https://threatpost.com/breach-0086
+87,2020-08-12,Capital Corp,Financial,GB,154977,Social Engineering,https://cyberscoop.com/breach-0087
+88,2020-03-27,Systems Systems,Technology,JP,18543,System Error,https://infosecurity-magazine.com/breach-0088
+89,2024-12-31,Credit Ltd,Financial,NO,33284,Social Engineering,https://bleepingcomputer.com/breach-0089
+90,2021-11-11,Data Solutions,Manufacturing,ES,898950,Insider,https://bleepingcomputer.com/breach-0090
+91,2021-09-29,Tech 1 LLC,Manufacturing,CN,103217,Insider,https://threatpost.com/breach-0091
+92,2020-10-09,Systems Solutions,Energy,NO,988712,System Error,https://krebsonsecurity.com/breach-0092
+93,2020-12-22,Cloud National Systems,Education,JP,19749,Hacking,https://cyberscoop.com/breach-0093
+94,2024-12-31,Agency Inc,Government,JP,274259,Insider,https://securityweek.com/breach-0094
+95,2020-05-19,Systems Ltd,Technology,AT,402829,System Error,https://krebsonsecurity.com/breach-0095
+96,2024-12-31,Department Group,Government,DE,56057,System Error,https://infosecurity-magazine.com/breach-0096
+97,2020-07-06,Medical Solutions,Healthcare,FR,111797,System Error,https://bleepingcomputer.com/breach-0097
+98,2020-06-01,Systems Corp,Manufacturing,FI,1562607,Insider,https://krebsonsecurity.com/breach-0098
+99,2023-02-17,Hospital Inc,Healthcare,DK,7972,Insider,https://cybernews.com/breach-0099
+100,2024-12-31,Systems Group,Education,NL,244469,Unknown,https://cybernews.com/breach-0100
+101,2020-12-31,Store Solutions,Retail,SE,65424,Physical,https://infosecurity-magazine.com/breach-0101
+102,2024-12-31,Agency 1 Inc,Government,ES,1322148,Physical,https://cybernews.com/breach-0102
+103,2021-11-05,Software Systems,Transportation,IT,742285,Hacking,https://darkreading.com/breach-0103
+104,2020-09-20,Systems International Ltd,Media,CN,117665,Physical,https://bleepingcomputer.com/breach-0104
+105,2020-06-05,Agency Corp,Government,AT,362838,Insider,https://darkreading.com/breach-0105
+106,2020-01-04,Cloud National Solutions,Education,ES,253155,Insider,https://cyberscoop.com/breach-0106
+107,2020-09-10,Data Group,Energy,NO,599822,Hacking,https://threatpost.com/breach-0107
+108,2020-02-01,Tech Group,Technology,BE,143532,Hacking,https://cybernews.com/breach-0108
+109,2020-12-08,Finance Services,Financial,ES,65596,Hacking,https://krebsonsecurity.com/breach-0109
+110,2024-11-03,Store 1 Group,Retail,CN,30564,System Error,https://cybernews.com/breach-0110
+111,2020-11-03,Tech 1 Solutions,Education,CA,864890,Insider,https://cyberscoop.com/breach-0111
+112,2020-11-12,State LLC,Government,AU,501224,Hacking,https://cyberscoop.com/breach-0112
+113,2020-12-14,Capital Inc,Financial,IN,61092,Hacking,https://bleepingcomputer.com/breach-0113
+114,2021-04-05,Cloud Systems,Transportation,AU,120517,Insider,https://bleepingcomputer.com/breach-0114
+115,2021-01-14,Systems Services,Technology,DK,1254095,Physical,https://infosecurity-magazine.com/breach-0115
+116,2020-02-13,Software Group,Technology,NO,254760,System Error,https://therecord.media/breach-0116
+117,2020-10-07,Care Inc,Healthcare,GB,64990,System Error,https://krebsonsecurity.com/breach-0117
+118,2021-10-04,Data Services,Manufacturing,AT,834954,Physical,https://bleepingcomputer.com/breach-0118
+119,2020-01-25,Software Services,Transportation,FR,268931,Social Engineering,https://cyberscoop.com/breach-0119
+120,2020-02-02,Data Inc,Education,BE,235195,Insider,https://threatpost.com/breach-0120
+121,2021-06-16,Cloud Systems,Education,CA,441727,Insider,https://bleepingcomputer.com/breach-0121
+122,2020-10-14,State LLC,Government,CH,1301126,Physical,https://bleepingcomputer.com/breach-0122
+123,2020-09-30,Data 2 Group,Energy,FI,62629,Hacking,https://threatpost.com/breach-0123
+124,2023-02-06,Bank Corp,Financial,CN,542211,Hacking,https://threatpost.com/breach-0124
+125,2022-10-04,Cloud 3 Services,Technology,BE,297414,System Error,https://therecord.media/breach-0125
+126,2020-06-15,Shop Ltd,Retail,CH,68440,System Error,https://cyberscoop.com/breach-0126
+127,2022-09-10,Cloud International Group,Technology,JP,844796,Insider,https://bleepingcomputer.com/breach-0127
+128,2022-05-26,State Services,Government,CA,51170,Insider,https://therecord.media/breach-0128
+129,2020-11-22,Software 1 Systems,Education,US,160372,Unknown,https://infosecurity-magazine.com/breach-0129
+130,2020-01-24,Software LLC,Technology,DE,174260,Hacking,https://darkreading.com/breach-0130
+131,2021-04-29,Commerce 3 Solutions,Retail,DE,44923,System Error,https://therecord.media/breach-0131
+132,2023-01-07,Capital Corp,Financial,AU,158000,Hacking,https://infosecurity-magazine.com/breach-0132
+133,2020-11-23,Retail Global Systems,Retail,AT,106863,Hacking,https://cyberscoop.com/breach-0133
+134,2021-09-06,Data Group,Manufacturing,GB,153760,Insider,https://bleepingcomputer.com/breach-0134
+135,2020-03-28,Data Systems,Media,IT,163870,Hacking,https://bleepingcomputer.com/breach-0135
+136,2020-07-30,Tech Ltd,Manufacturing,GB,126442,Insider,https://therecord.media/breach-0136
+137,2022-05-01,Federal Group,Government,GB,107910,Insider,https://therecord.media/breach-0137
+138,2024-12-31,Software Services,Energy,IT,400950,System Error,https://bleepingcomputer.com/breach-0138
+139,2024-12-31,Cloud Group,Energy,BE,86741,Insider,https://therecord.media/breach-0139
+140,2020-01-27,Data 1 Solutions,Education,NO,26766,Insider,https://threatpost.com/breach-0140
+141,2023-02-23,Hospital 2 Corp,Healthcare,DE,106276,System Error,https://krebsonsecurity.com/breach-0141
+142,2021-11-22,Data Systems,Media,DE,143366,Hacking,https://krebsonsecurity.com/breach-0142
+143,2021-03-19,Systems 3 Inc,Technology,DK,312303,Insider,https://therecord.media/breach-0143
+144,2020-03-29,Retail National Services,Retail,AU,67644,Physical,https://infosecurity-magazine.com/breach-0144
+145,2021-04-20,Finance LLC,Financial,CH,278890,Hacking,https://threatpost.com/breach-0145
+146,2020-01-17,Commerce Systems,Retail,DK,40458,Physical,https://cyberscoop.com/breach-0146
+147,2020-03-22,Data Inc,Media,CA,320440,System Error,https://threatpost.com/breach-0147
+148,2021-03-01,Tech Inc,Technology,SE,133933,Insider,https://infosecurity-magazine.com/breach-0148
+149,2023-02-12,Data Ltd,Transportation,CN,220967,Insider,https://bleepingcomputer.com/breach-0149
+150,2021-06-29,Systems Global LLC,Transportation,FR,521592,System Error,https://krebsonsecurity.com/breach-0150
+151,2020-01-29,Clinic Group,Healthcare,CA,109619,Insider,https://cybernews.com/breach-0151
+152,2021-02-05,Agency Group,Government,CN,220293,Insider,https://securityweek.com/breach-0152
+153,2020-04-04,Data Systems,Education,BE,73113,System Error,https://securityweek.com/breach-0153
+154,2020-07-08,Cloud 3 LLC,Manufacturing,AU,106204,Social Engineering,https://therecord.media/breach-0154
+155,2020-01-15,Agency Services,Government,DK,70489,Insider,https://therecord.media/breach-0155
+156,2020-01-05,Gov 3 Solutions,Government,CH,783233,Insider,https://krebsonsecurity.com/breach-0156
+157,2020-05-11,Systems Global Group,Media,CH,165523,System Error,https://bleepingcomputer.com/breach-0157
+158,2020-10-31,Data Systems,Technology,AU,69866,Hacking,https://krebsonsecurity.com/breach-0158
+159,2022-09-18,Systems Global Services,Technology,IT,119758,System Error,https://infosecurity-magazine.com/breach-0159
+160,2021-04-07,Systems Group,Transportation,FI,57880,System Error,https://darkreading.com/breach-0160
+161,2021-01-26,Clinic Ltd,Healthcare,BE,59427,System Error,https://cyberscoop.com/breach-0161
+162,2020-01-20,Tech 3 Ltd,Technology,IN,157742,Insider,https://therecord.media/breach-0162
+163,2021-03-21,Clinic Systems,Healthcare,DE,47109,Social Engineering,https://cybernews.com/breach-0163
+164,2020-09-23,Data 2 Services,Education,CH,116498,Physical,https://darkreading.com/breach-0164
+165,2020-08-20,Market Global Group,Retail,DK,122236,Physical,https://threatpost.com/breach-0165
+166,2020-07-25,Gov Systems,Government,GB,432532,Physical,https://darkreading.com/breach-0166
+167,2020-03-30,Systems National Ltd,Transportation,BR,490784,Hacking,https://cyberscoop.com/breach-0167
+168,2020-03-05,Cloud Corp,Education,DK,1800716,Insider,https://securityweek.com/breach-0168
+169,2020-07-23,Gov Inc,Government,IT,25858,Hacking,https://threatpost.com/breach-0169
+170,2024-07-11,Tech Solutions,Energy,FR,23436,Physical,https://krebsonsecurity.com/breach-0170
+171,2021-05-25,Health National Systems,Healthcare,CN,57904,System Error,https://therecord.media/breach-0171
+172,2022-10-04,State LLC,Government,JP,370419,Insider,https://darkreading.com/breach-0172
+173,2020-04-27,Software Solutions,Media,JP,106598,Hacking,https://krebsonsecurity.com/breach-0173
+174,2020-06-12,State Systems,Government,NL,353815,Hacking,https://therecord.media/breach-0174
+175,2020-11-12,Department Group,Government,FR,112055,Social Engineering,https://threatpost.com/breach-0175
+176,2020-10-11,Systems Services,Manufacturing,BE,815380,Hacking,https://cybernews.com/breach-0176
+177,2022-01-10,Tech Global Inc,Manufacturing,FI,475615,Hacking,https://infosecurity-magazine.com/breach-0177
+178,2020-03-16,Cloud Global Services,Transportation,NO,181142,System Error,https://therecord.media/breach-0178
+179,2021-05-13,Data Corp,Media,GB,1692586,Hacking,https://cyberscoop.com/breach-0179
+180,2021-04-19,Tech Inc,Education,CA,187000,Hacking,https://cyberscoop.com/breach-0180
+181,2020-12-28,Software National Solutions,Education,NL,419656,Hacking,https://threatpost.com/breach-0181
+182,2021-04-03,Cloud Corp,Transportation,NL,922363,Social Engineering,https://cybernews.com/breach-0182
+183,2020-06-22,Data National LLC,Energy,IN,408300,Hacking,https://securityweek.com/breach-0183
+184,2020-03-05,Retail Services,Retail,CA,108210,Social Engineering,https://therecord.media/breach-0184
+185,2020-05-29,Retail LLC,Retail,CH,10537,Physical,https://infosecurity-magazine.com/breach-0185
+186,2023-06-25,Commerce Ltd,Retail,CN,31416,System Error,https://threatpost.com/breach-0186
+187,2021-02-20,Data Solutions,Energy,CH,117395,System Error,https://threatpost.com/breach-0187
+188,2020-06-16,Cloud Group,Transportation,DK,64205,System Error,https://cyberscoop.com/breach-0188
+189,2020-03-28,Cloud National Group,Transportation,FI,53833,Insider,https://securityweek.com/breach-0189
+190,2020-10-15,Clinic Corp,Healthcare,BR,5296,System Error,https://securityweek.com/breach-0190
+191,2023-05-24,Data Group,Manufacturing,JP,65500,Hacking,https://cybernews.com/breach-0191
+192,2020-10-18,Systems Systems,Education,CN,25626,Insider,https://therecord.media/breach-0192
+193,2020-10-08,Software Corp,Education,JP,114258,Insider,https://cyberscoop.com/breach-0193
+194,2020-05-12,Federal Solutions,Government,DE,56820,Physical,https://darkreading.com/breach-0194
+195,2021-01-10,Data Global LLC,Manufacturing,DK,157137,Insider,https://krebsonsecurity.com/breach-0195
+196,2023-01-16,Tech Corp,Transportation,GB,76999,Insider,https://threatpost.com/breach-0196
+197,2021-03-04,Care Corp,Healthcare,JP,105426,Insider,https://krebsonsecurity.com/breach-0197
+198,2021-05-03,Health Corp,Healthcare,CH,233297,Hacking,https://bleepingcomputer.com/breach-0198
+199,2020-06-16,Systems Group,Transportation,DE,103179,System Error,https://therecord.media/breach-0199
+200,2024-12-31,Cloud Group,Media,IN,1120786,Hacking,https://bleepingcomputer.com/breach-0200
+201,2020-10-15,Software Corp,Energy,NL,292267,Unknown,https://infosecurity-magazine.com/breach-0201
+202,2023-10-02,Tech National Ltd,Media,AU,710469,Hacking,https://darkreading.com/breach-0202
+203,2021-10-15,Cloud 2 Systems,Transportation,AT,365404,Social Engineering,https://bleepingcomputer.com/breach-0203
+204,2021-05-20,Department Solutions,Government,FR,167934,Unknown,https://bleepingcomputer.com/breach-0204
+205,2020-02-03,Software Ltd,Transportation,ES,61218,Social Engineering,https://infosecurity-magazine.com/breach-0205
+206,2022-07-20,Hospital Global Services,Healthcare,BR,189435,System Error,https://cyberscoop.com/breach-0206
+207,2020-08-01,Credit 2 Inc,Financial,BE,38574,Insider,https://infosecurity-magazine.com/breach-0207
+208,2020-02-28,Data Services,Education,AU,126851,System Error,https://cybernews.com/breach-0208
+209,2020-11-15,Tech Inc,Transportation,FI,35217,System Error,https://krebsonsecurity.com/breach-0209
+210,2020-10-25,Gov Ltd,Government,SE,60057,Insider,https://darkreading.com/breach-0210
+211,2020-02-09,Software Group,Manufacturing,DE,194223,Hacking,https://therecord.media/breach-0211
+212,2020-05-12,Tech LLC,Media,BE,633551,System Error,https://therecord.media/breach-0212
+213,2022-10-25,Systems LLC,Education,SE,357596,Hacking,https://cyberscoop.com/breach-0213
+214,2022-03-19,Software Ltd,Education,CN,34404,Insider,https://securityweek.com/breach-0214
+215,2020-04-30,Systems Corp,Media,CH,159582,System Error,https://bleepingcomputer.com/breach-0215
+216,2020-04-01,Data 2 Ltd,Energy,DK,1151621,Insider,https://therecord.media/breach-0216
+217,2021-04-10,Software Corp,Media,NL,19930,Insider,https://bleepingcomputer.com/breach-0217
+218,2021-10-14,Finance LLC,Financial,IN,166048,Social Engineering,https://bleepingcomputer.com/breach-0218
+219,2020-07-01,Clinic Ltd,Healthcare,AU,22013,System Error,https://threatpost.com/breach-0219
+220,2021-02-05,Data Solutions,Education,US,366570,Hacking,https://cybernews.com/breach-0220
+221,2021-01-28,Software Services,Manufacturing,ES,32888,System Error,https://bleepingcomputer.com/breach-0221
+222,2021-03-17,Systems LLC,Technology,IN,158144,Unknown,https://threatpost.com/breach-0222
+223,2020-11-02,Systems Ltd,Technology,SE,177136,System Error,https://bleepingcomputer.com/breach-0223
+224,2022-09-05,Systems LLC,Media,AU,111252,System Error,https://cybernews.com/breach-0224
+225,2020-10-26,Software Inc,Education,BE,941451,Unknown,https://darkreading.com/breach-0225
+226,2020-02-23,Cloud 3 Systems,Media,AT,70087,System Error,https://cyberscoop.com/breach-0226
+227,2021-06-04,Software LLC,Media,DE,442111,Insider,https://cybernews.com/breach-0227
+228,2020-07-26,Cloud Systems,Technology,DK,917475,Social Engineering,https://threatpost.com/breach-0228
+229,2024-12-31,Commerce Services,Retail,NL,71415,Hacking,https://bleepingcomputer.com/breach-0229
+230,2022-08-25,Cloud 2 Group,Media,US,216130,Insider,https://therecord.media/breach-0230
+231,2020-03-14,Tech Group,Transportation,FI,480233,Hacking,https://therecord.media/breach-0231
+232,2024-12-31,Tech 1 Ltd,Transportation,JP,175201,Social Engineering,https://bleepingcomputer.com/breach-0232
+233,2022-10-10,Commerce Systems,Retail,JP,104405,Hacking,https://securityweek.com/breach-0233
+234,2020-09-19,Care LLC,Healthcare,AT,81826,System Error,https://bleepingcomputer.com/breach-0234
+235,2024-03-08,Data LLC,Technology,SE,95607,Hacking,https://cyberscoop.com/breach-0235
+236,2021-06-08,Data Solutions,Manufacturing,DE,433020,Unknown,https://infosecurity-magazine.com/breach-0236
+237,2020-08-29,Tech Inc,Manufacturing,DK,161754,Hacking,https://cybernews.com/breach-0237
+238,2024-12-31,Cloud 3 Services,Energy,JP,103426,System Error,https://infosecurity-magazine.com/breach-0238
+239,2020-03-04,Hospital 2 Corp,Healthcare,GB,72582,Hacking,https://darkreading.com/breach-0239
+240,2020-06-24,Finance National LLC,Financial,ES,32952,Social Engineering,https://bleepingcomputer.com/breach-0240
+241,2020-05-26,Bank LLC,Financial,US,106195,Insider,https://bleepingcomputer.com/breach-0241
+242,2021-01-30,Cloud 1 Solutions,Energy,DE,68168,System Error,https://threatpost.com/breach-0242
+243,2021-04-05,Tech LLC,Technology,CA,557974,System Error,https://therecord.media/breach-0243
+244,2023-10-13,Store Inc,Retail,CA,51807,Hacking,https://securityweek.com/breach-0244
+245,2021-07-11,Systems Group,Transportation,BE,1713983,System Error,https://securityweek.com/breach-0245
+246,2021-03-09,Software Group,Transportation,BE,2120098,System Error,https://bleepingcomputer.com/breach-0246
+247,2021-09-10,Retail Corp,Retail,DK,314690,System Error,https://threatpost.com/breach-0247
+248,2020-01-11,Tech 1 Corp,Manufacturing,CA,156493,Social Engineering,https://cyberscoop.com/breach-0248
+249,2021-09-14,Systems 3 LLC,Energy,CA,97480,Unknown,https://bleepingcomputer.com/breach-0249
+250,2022-03-07,Federal International Corp,Government,SE,27424,Physical,https://threatpost.com/breach-0250
+251,2022-01-19,Bank LLC,Financial,US,58000,Physical,https://threatpost.com/breach-0251
+252,2022-04-23,Data Inc,Education,DE,131690,System Error,https://bleepingcomputer.com/breach-0252
+253,2021-03-11,Tech Services,Manufacturing,NO,101510,System Error,https://bleepingcomputer.com/breach-0253
+254,2020-01-02,Retail 3 Ltd,Retail,FI,59221,Hacking,https://cybernews.com/breach-0254
+255,2020-08-24,Software 1 Systems,Energy,IN,229908,Hacking,https://threatpost.com/breach-0255
+256,2024-12-31,Shop Inc,Retail,FI,52563,Physical,https://securityweek.com/breach-0256
+257,2022-07-23,Department Ltd,Government,AT,204610,Insider,https://cybernews.com/breach-0257
+258,2020-01-04,Shop 3 Corp,Retail,DE,160497,Physical,https://krebsonsecurity.com/breach-0258
+259,2020-03-07,Systems Ltd,Energy,CN,85320,Hacking,https://cybernews.com/breach-0259
+260,2021-01-08,Tech Inc,Energy,ES,295003,Hacking,https://cyberscoop.com/breach-0260
+261,2020-07-28,Data Solutions,Technology,IN,361543,Hacking,https://securityweek.com/breach-0261
+262,2020-03-11,Tech LLC,Technology,AT,139139,Hacking,https://therecord.media/breach-0262
+263,2020-07-06,Gov National Inc,Government,NO,48096,Hacking,https://infosecurity-magazine.com/breach-0263
+264,2022-01-25,Data Solutions,Technology,CA,301620,Hacking,https://cyberscoop.com/breach-0264
+265,2022-04-19,Cloud Inc,Manufacturing,CH,366641,Hacking,https://threatpost.com/breach-0265
+266,2020-10-10,Retail Group,Retail,NL,17336,Hacking,https://infosecurity-magazine.com/breach-0266
+267,2024-10-02,Bank LLC,Financial,GB,65959,Insider,https://cyberscoop.com/breach-0267
+268,2020-05-27,Cloud 2 Group,Technology,ES,107729,Insider,https://therecord.media/breach-0268
+269,2020-07-18,Medical Global Solutions,Healthcare,CA,53968,System Error,https://infosecurity-magazine.com/breach-0269
+270,2022-07-14,Data Systems,Manufacturing,CH,89288,System Error,https://krebsonsecurity.com/breach-0270
+271,2020-09-26,Systems Ltd,Manufacturing,FI,27089,Insider,https://krebsonsecurity.com/breach-0271
+272,2023-02-14,Shop Systems,Retail,AT,38659,Physical,https://krebsonsecurity.com/breach-0272
+273,2021-05-19,Systems Ltd,Education,AT,218322,Hacking,https://securityweek.com/breach-0273
+274,2020-01-13,Software Corp,Media,IN,550003,Hacking,https://infosecurity-magazine.com/breach-0274
+275,2020-04-07,Medical Inc,Healthcare,US,40967,Hacking,https://threatpost.com/breach-0275
+276,2021-09-29,Cloud Global Systems,Energy,DK,476345,Physical,https://threatpost.com/breach-0276
+277,2024-12-13,Systems Solutions,Technology,US,585539,System Error,https://securityweek.com/breach-0277
+278,2024-08-06,Cloud Systems,Media,AU,1642002,System Error,https://securityweek.com/breach-0278
+279,2020-09-19,Retail International Corp,Retail,CA,275586,System Error,https://cyberscoop.com/breach-0279
+280,2022-08-04,Trust 1 Ltd,Financial,DK,35691,Insider,https://bleepingcomputer.com/breach-0280
+281,2020-09-08,Systems Services,Transportation,CA,142332,System Error,https://threatpost.com/breach-0281
+282,2020-09-01,Medical Solutions,Healthcare,AU,204931,Insider,https://darkreading.com/breach-0282
+283,2020-01-31,Commerce 3 Services,Retail,AU,330165,Hacking,https://krebsonsecurity.com/breach-0283
+284,2021-09-10,Retail Services,Retail,FR,43459,System Error,https://darkreading.com/breach-0284
+285,2020-10-25,Finance Solutions,Financial,CH,88137,Hacking,https://darkreading.com/breach-0285
+286,2020-04-09,Tech Inc,Media,GB,492995,Insider,https://cybernews.com/breach-0286
+287,2022-11-04,Hospital Services,Healthcare,NL,26185,System Error,https://krebsonsecurity.com/breach-0287
+288,2023-11-05,Systems International LLC,Transportation,AT,65770,Social Engineering,https://securityweek.com/breach-0288
+289,2020-06-30,Tech Inc,Technology,BE,154008,System Error,https://krebsonsecurity.com/breach-0289
+290,2021-03-26,Software Inc,Media,AT,46232,Hacking,https://bleepingcomputer.com/breach-0290
+291,2022-07-26,Systems Systems,Media,AU,61941,System Error,https://krebsonsecurity.com/breach-0291
+292,2020-11-09,Systems 3 Solutions,Technology,BR,282052,System Error,https://infosecurity-magazine.com/breach-0292
+293,2022-10-31,Care International Group,Healthcare,IT,351460,Insider,https://threatpost.com/breach-0293
+294,2022-06-24,State Group,Government,NO,182798,Insider,https://therecord.media/breach-0294
+295,2022-11-13,Systems National LLC,Transportation,ES,202715,System Error,https://krebsonsecurity.com/breach-0295
+296,2023-06-20,Cloud International Corp,Technology,JP,59912,System Error,https://therecord.media/breach-0296
+297,2021-09-06,Tech International Corp,Transportation,NL,243347,System Error,https://cybernews.com/breach-0297
+298,2020-04-18,Data International Inc,Education,ES,368456,Hacking,https://securityweek.com/breach-0298
+299,2021-03-14,Gov Services,Government,SE,282730,Insider,https://darkreading.com/breach-0299
+300,2023-10-06,State International Services,Government,SE,73888,Physical,https://bleepingcomputer.com/breach-0300
+301,2024-12-31,Care 1 Group,Healthcare,FI,47694,Insider,https://darkreading.com/breach-0301
+302,2020-05-07,Department Ltd,Government,CN,248677,Physical,https://krebsonsecurity.com/breach-0302
+303,2020-07-01,Software Solutions,Manufacturing,CN,232963,Insider,https://cybernews.com/breach-0303
+304,2021-03-06,Cloud International LLC,Manufacturing,ES,84551,Insider,https://infosecurity-magazine.com/breach-0304
+305,2020-09-24,Finance Solutions,Financial,IN,67614,Hacking,https://therecord.media/breach-0305
+306,2021-06-12,Clinic Inc,Healthcare,AT,27568,System Error,https://darkreading.com/breach-0306
+307,2023-05-30,Cloud LLC,Energy,GB,142381,Hacking,https://threatpost.com/breach-0307
+308,2021-02-13,Tech LLC,Media,FR,293582,Social Engineering,https://krebsonsecurity.com/breach-0308
+309,2020-05-15,Care Corp,Healthcare,CH,127944,Hacking,https://securityweek.com/breach-0309
+310,2020-08-15,Retail Solutions,Retail,ES,52543,Physical,https://therecord.media/breach-0310
+311,2021-03-27,Software LLC,Transportation,BE,585797,System Error,https://krebsonsecurity.com/breach-0311
+312,2022-03-01,Store Ltd,Retail,IN,90255,System Error,https://krebsonsecurity.com/breach-0312
+313,2022-06-16,Systems Corp,Energy,BR,61079,System Error,https://therecord.media/breach-0313
+314,2021-12-24,Tech Group,Technology,JP,48004,Insider,https://threatpost.com/breach-0314
+315,2021-03-12,Systems 1 Inc,Energy,AU,198025,System Error,https://securityweek.com/breach-0315
+316,2020-08-01,Tech Services,Education,SE,372416,Hacking,https://bleepingcomputer.com/breach-0316
+317,2021-11-04,Credit Inc,Financial,AT,704584,Insider,https://darkreading.com/breach-0317
+318,2020-03-05,Cloud Corp,Manufacturing,GB,95242,Hacking,https://bleepingcomputer.com/breach-0318
+319,2023-03-08,Medical Systems,Healthcare,US,37693,Hacking,https://infosecurity-magazine.com/breach-0319
+320,2020-03-14,Software International Services,Education,FR,373424,Hacking,https://bleepingcomputer.com/breach-0320
+321,2024-12-31,Cloud Inc,Technology,GB,439508,Hacking,https://cyberscoop.com/breach-0321
+322,2020-01-18,Cloud Services,Education,BE,64742,System Error,https://infosecurity-magazine.com/breach-0322
+323,2022-06-07,Clinic Ltd,Healthcare,FI,77661,System Error,https://bleepingcomputer.com/breach-0323
+324,2021-02-04,Software LLC,Energy,IN,47637,System Error,https://krebsonsecurity.com/breach-0324
+325,2021-05-01,Software Solutions,Transportation,IN,54508,Hacking,https://therecord.media/breach-0325
+326,2020-03-17,Software International Corp,Manufacturing,IT,34203,System Error,https://darkreading.com/breach-0326
+327,2020-05-21,Software Systems,Transportation,CH,74762,Insider,https://therecord.media/breach-0327
+328,2020-03-14,Cloud Corp,Education,NO,94800,Hacking,https://threatpost.com/breach-0328
+329,2022-11-15,Software 2 Inc,Manufacturing,DE,142581,Unknown,https://infosecurity-magazine.com/breach-0329
+330,2020-01-29,Trust Inc,Financial,SE,77988,Insider,https://therecord.media/breach-0330
+331,2022-03-22,Clinic Solutions,Healthcare,FI,47109,Insider,https://threatpost.com/breach-0331
+332,2020-10-25,Systems Systems,Technology,AU,874349,System Error,https://cybernews.com/breach-0332
+333,2023-04-14,Department Global Ltd,Government,CH,485025,Insider,https://threatpost.com/breach-0333
+334,2021-12-22,Data Inc,Transportation,CH,258376,Unknown,https://cyberscoop.com/breach-0334
+335,2023-07-01,Software Corp,Transportation,CN,288117,Insider,https://darkreading.com/breach-0335
+336,2023-01-18,State Ltd,Government,DE,387037,Physical,https://darkreading.com/breach-0336
+337,2020-10-25,Care 3 Corp,Healthcare,NL,151759,System Error,https://infosecurity-magazine.com/breach-0337
+338,2022-03-27,Cloud 2 Ltd,Media,CH,119496,System Error,https://krebsonsecurity.com/breach-0338
+339,2022-01-22,Cloud 3 Corp,Education,NO,416804,Insider,https://darkreading.com/breach-0339
+340,2021-05-01,Tech Systems,Manufacturing,AT,1026247,Insider,https://cyberscoop.com/breach-0340
+341,2020-11-10,Data Ltd,Transportation,CH,304052,Insider,https://cybernews.com/breach-0341
+342,2022-11-22,Tech Inc,Manufacturing,CH,75364,Insider,https://securityweek.com/breach-0342
+343,2020-10-19,Health National Solutions,Healthcare,IT,121037,Social Engineering,https://therecord.media/breach-0343
+344,2023-10-23,Medical Systems,Healthcare,CN,272109,Hacking,https://securityweek.com/breach-0344
+345,2023-01-04,Store Solutions,Retail,SE,25005,Hacking,https://bleepingcomputer.com/breach-0345
+346,2022-08-20,Clinic Inc,Healthcare,FR,26623,System Error,https://cyberscoop.com/breach-0346
+347,2020-01-11,Tech Corp,Energy,IT,459564,Insider,https://bleepingcomputer.com/breach-0347
+348,2020-03-09,Data International Inc,Education,FI,63727,Hacking,https://cybernews.com/breach-0348
+349,2022-04-15,Commerce Group,Retail,DE,11306,Unknown,https://infosecurity-magazine.com/breach-0349
+350,2023-06-18,Medical Global Inc,Healthcare,CH,71540,Physical,https://securityweek.com/breach-0350
+351,2020-11-19,Systems 2 LLC,Education,JP,261558,Insider,https://krebsonsecurity.com/breach-0351
+352,2021-09-21,Tech Group,Transportation,NO,117379,System Error,https://infosecurity-magazine.com/breach-0352
+353,2020-03-05,Systems Inc,Technology,IN,113216,System Error,https://threatpost.com/breach-0353
+354,2020-10-02,Data 3 Solutions,Media,AT,114315,Social Engineering,https://darkreading.com/breach-0354
+355,2021-11-23,Data Services,Education,DE,141090,Hacking,https://bleepingcomputer.com/breach-0355
+356,2023-09-12,Federal Group,Government,DE,332802,System Error,https://krebsonsecurity.com/breach-0356
+357,2020-11-12,Systems Ltd,Media,AT,242789,Social Engineering,https://threatpost.com/breach-0357
+358,2020-06-02,Systems Global Group,Education,NL,206010,Insider,https://securityweek.com/breach-0358
+359,2022-05-11,Cloud Global Services,Media,FR,191364,System Error,https://securityweek.com/breach-0359
+360,2020-10-07,Bank Ltd,Financial,BR,226399,Hacking,https://krebsonsecurity.com/breach-0360
+361,2022-01-10,Systems Group,Education,AU,82039,Insider,https://cyberscoop.com/breach-0361
+362,2021-10-06,Tech Group,Education,AT,848007,System Error,https://therecord.media/breach-0362
+363,2020-01-05,Cloud 1 Services,Manufacturing,BE,207058,Hacking,https://infosecurity-magazine.com/breach-0363
+364,2021-10-20,Software Systems,Media,AU,188194,Hacking,https://cyberscoop.com/breach-0364
+365,2020-01-27,Clinic Global LLC,Healthcare,IN,17902,Insider,https://krebsonsecurity.com/breach-0365
+366,2020-05-28,Department Services,Government,CA,348249,Insider,https://cybernews.com/breach-0366
+367,2022-02-22,State Services,Government,FR,45652,Hacking,https://securityweek.com/breach-0367
+368,2021-12-02,Cloud Global Inc,Transportation,FI,811617,Hacking,https://bleepingcomputer.com/breach-0368
+369,2023-11-14,Systems Corp,Manufacturing,DE,767122,System Error,https://krebsonsecurity.com/breach-0369
+370,2020-06-07,Software Solutions,Transportation,SE,782894,System Error,https://therecord.media/breach-0370
+371,2020-07-21,Commerce 1 Solutions,Retail,CA,412145,Hacking,https://cybernews.com/breach-0371
+372,2021-10-08,Care Solutions,Healthcare,NL,9136,System Error,https://cyberscoop.com/breach-0372
+373,2021-07-30,Software Ltd,Media,ES,512359,Insider,https://therecord.media/breach-0373
+374,2021-06-08,Agency LLC,Government,CN,443269,Physical,https://threatpost.com/breach-0374
+375,2021-03-08,Finance National Corp,Financial,JP,88829,Hacking,https://krebsonsecurity.com/breach-0375
+376,2021-08-02,Systems Group,Energy,NL,4353422,Unknown,https://therecord.media/breach-0376
+377,2020-05-17,Systems Global Group,Manufacturing,US,212368,Insider,https://krebsonsecurity.com/breach-0377
+378,2021-10-09,Cloud Inc,Education,IN,419901,Insider,https://securityweek.com/breach-0378
+379,2022-03-23,Tech Inc,Transportation,US,482144,System Error,https://darkreading.com/breach-0379
+380,2024-12-31,Shop Solutions,Retail,BE,37570,Hacking,https://cybernews.com/breach-0380
+381,2024-11-23,Department Group,Government,IT,530781,Insider,https://therecord.media/breach-0381
+382,2024-12-31,Shop Services,Retail,IT,248732,Physical,https://securityweek.com/breach-0382
+383,2020-11-19,Market Corp,Retail,IT,42430,System Error,https://infosecurity-magazine.com/breach-0383
+384,2024-06-18,Capital Systems,Financial,CH,252309,Unknown,https://securityweek.com/breach-0384
+385,2020-06-11,Cloud 2 Group,Manufacturing,JP,65433,Hacking,https://therecord.media/breach-0385
+386,2022-05-29,Systems Corp,Media,US,144827,System Error,https://darkreading.com/breach-0386
+387,2024-12-31,Systems Group,Manufacturing,FR,327217,System Error,https://therecord.media/breach-0387
+388,2021-02-28,Software LLC,Transportation,GB,51757,Hacking,https://krebsonsecurity.com/breach-0388
+389,2021-06-13,Market Systems,Retail,NL,30093,Physical,https://infosecurity-magazine.com/breach-0389
+390,2021-02-24,Cloud Solutions,Education,FR,44459,Hacking,https://threatpost.com/breach-0390
+391,2022-10-21,Data Ltd,Media,IN,427796,Unknown,https://threatpost.com/breach-0391
+392,2020-04-28,Software LLC,Manufacturing,US,691805,Social Engineering,https://darkreading.com/breach-0392
+393,2023-04-05,Gov 2 Solutions,Government,CH,134545,Insider,https://darkreading.com/breach-0393
+394,2021-05-15,Data 1 Systems,Education,ES,90110,Insider,https://cybernews.com/breach-0394
+395,2020-09-24,Systems Services,Technology,CN,181186,System Error,https://threatpost.com/breach-0395
+396,2020-11-29,Systems Solutions,Technology,IT,101067,System Error,https://cyberscoop.com/breach-0396
+397,2022-07-13,State Services,Government,NO,476647,Unknown,https://bleepingcomputer.com/breach-0397
+398,2020-11-03,Retail Inc,Retail,FR,71440,System Error,https://bleepingcomputer.com/breach-0398
+399,2021-08-08,Bank Solutions,Financial,BR,54586,Hacking,https://cybernews.com/breach-0399
+400,2020-01-22,Data Systems,Technology,US,129331,System Error,https://therecord.media/breach-0400
+401,2020-04-28,Systems Services,Technology,CH,341323,Insider,https://cybernews.com/breach-0401
+402,2021-02-03,Federal Inc,Government,ES,109899,Hacking,https://cybernews.com/breach-0402
+403,2020-07-24,Systems Corp,Technology,ES,188993,System Error,https://darkreading.com/breach-0403
+404,2022-08-27,Systems Global Systems,Media,IN,173205,Unknown,https://cyberscoop.com/breach-0404
+405,2020-07-04,Software Ltd,Energy,IN,756532,System Error,https://darkreading.com/breach-0405
+406,2020-11-20,Tech 1 LLC,Transportation,BR,369686,Insider,https://therecord.media/breach-0406
+407,2020-01-12,Retail 1 Corp,Retail,IT,48924,Hacking,https://securityweek.com/breach-0407
+408,2020-01-10,Credit Systems,Financial,DE,265701,Social Engineering,https://krebsonsecurity.com/breach-0408
+409,2023-02-03,Cloud International Corp,Education,CA,49927,System Error,https://cyberscoop.com/breach-0409
+410,2024-12-31,Medical Solutions,Healthcare,AU,34435,Insider,https://bleepingcomputer.com/breach-0410
+411,2021-01-24,Data National Systems,Transportation,JP,209850,Hacking,https://infosecurity-magazine.com/breach-0411
+412,2024-12-31,Medical Solutions,Healthcare,JP,22730,Hacking,https://krebsonsecurity.com/breach-0412
+413,2022-07-20,Hospital LLC,Healthcare,AT,7956,Unknown,https://krebsonsecurity.com/breach-0413
+414,2021-09-21,Clinic 2 Inc,Healthcare,ES,24536,Insider,https://therecord.media/breach-0414
+415,2021-12-12,Market 1 LLC,Retail,US,71712,System Error,https://therecord.media/breach-0415
+416,2020-05-05,Market Systems,Retail,AT,7629,System Error,https://threatpost.com/breach-0416
+417,2020-04-12,Finance Group,Financial,FI,70358,Social Engineering,https://threatpost.com/breach-0417
+418,2023-03-29,Clinic Ltd,Healthcare,BE,98262,System Error,https://threatpost.com/breach-0418
+419,2020-08-25,Data National Inc,Media,CN,74083,Insider,https://cyberscoop.com/breach-0419
+420,2021-08-18,Systems 2 Group,Manufacturing,FI,243215,Insider,https://therecord.media/breach-0420
+421,2022-09-09,Bank Systems,Financial,NO,362284,Social Engineering,https://krebsonsecurity.com/breach-0421
+422,2021-04-03,Tech 2 Group,Media,BR,456287,Insider,https://securityweek.com/breach-0422
+423,2021-05-12,Systems Solutions,Media,FR,588248,Insider,https://cyberscoop.com/breach-0423
+424,2022-08-15,Trust Solutions,Financial,FR,178570,Insider,https://infosecurity-magazine.com/breach-0424
+425,2023-02-08,Software Solutions,Transportation,IT,134211,System Error,https://cybernews.com/breach-0425
+426,2024-12-31,Agency 1 Solutions,Government,ES,92274,Insider,https://krebsonsecurity.com/breach-0426
+427,2021-03-11,Department International LLC,Government,CH,112531,Physical,https://securityweek.com/breach-0427
+428,2022-10-11,Retail Solutions,Retail,BR,44353,Physical,https://threatpost.com/breach-0428
+429,2022-11-08,Tech Global Group,Manufacturing,AT,79369,Physical,https://infosecurity-magazine.com/breach-0429
+430,2024-06-08,Tech Ltd,Energy,SE,373454,Insider,https://krebsonsecurity.com/breach-0430
+431,2021-05-21,Data National Ltd,Education,CH,384786,Insider,https://cybernews.com/breach-0431
+432,2020-12-10,Capital 1 LLC,Financial,IN,84989,Insider,https://bleepingcomputer.com/breach-0432
+433,2020-12-12,Cloud LLC,Energy,FI,84930,Insider,https://cybernews.com/breach-0433
+434,2020-02-15,Shop Systems,Retail,IN,86871,Physical,https://infosecurity-magazine.com/breach-0434
+435,2020-09-14,Retail 3 Group,Retail,IT,66781,Hacking,https://securityweek.com/breach-0435
+436,2022-05-12,Tech Inc,Education,DE,62503,System Error,https://krebsonsecurity.com/breach-0436
+437,2020-08-09,Software Corp,Education,AU,337227,System Error,https://cybernews.com/breach-0437
+438,2022-03-07,Cloud Corp,Manufacturing,BE,871628,Hacking,https://darkreading.com/breach-0438
+439,2020-07-11,Shop National Corp,Retail,BE,5286,Hacking,https://krebsonsecurity.com/breach-0439
+440,2020-06-09,Agency Inc,Government,NL,140516,Hacking,https://cybernews.com/breach-0440
+441,2024-05-06,Tech Global Corp,Manufacturing,CH,103774,Hacking,https://infosecurity-magazine.com/breach-0441
+442,2021-08-20,Cloud Group,Education,ES,1184465,Hacking,https://cybernews.com/breach-0442
+443,2020-04-10,Agency International LLC,Government,IN,167504,Unknown,https://securityweek.com/breach-0443
+444,2021-06-01,Software Group,Energy,IN,105482,Hacking,https://cybernews.com/breach-0444
+445,2020-08-12,Commerce LLC,Retail,DE,138851,Hacking,https://cybernews.com/breach-0445
+446,2020-05-03,Cloud Corp,Transportation,AU,608646,System Error,https://darkreading.com/breach-0446
+447,2020-03-09,Cloud Corp,Technology,JP,259914,Hacking,https://securityweek.com/breach-0447
+448,2020-09-27,Shop LLC,Retail,US,139947,Physical,https://therecord.media/breach-0448
+449,2020-04-18,Cloud Corp,Manufacturing,DE,540088,Hacking,https://securityweek.com/breach-0449
+450,2024-05-12,Capital Services,Financial,FR,57386,Insider,https://infosecurity-magazine.com/breach-0450
+451,2024-08-30,Systems Corp,Energy,BE,123771,Hacking,https://cybernews.com/breach-0451
+452,2024-12-31,Tech Solutions,Transportation,NL,253172,System Error,https://darkreading.com/breach-0452
+453,2020-04-20,State Corp,Government,NO,545460,Hacking,https://cybernews.com/breach-0453
+454,2022-07-07,Trust LLC,Financial,FR,73301,Social Engineering,https://securityweek.com/breach-0454
+455,2020-06-24,Cloud National Inc,Manufacturing,CA,174522,System Error,https://cybernews.com/breach-0455
+456,2020-10-16,Software Corp,Media,FR,1018387,Hacking,https://threatpost.com/breach-0456
+457,2022-06-11,Tech Solutions,Technology,FR,128515,Insider,https://krebsonsecurity.com/breach-0457
+458,2020-01-08,Software Services,Media,BR,66992,System Error,https://therecord.media/breach-0458
+459,2021-07-11,Credit Group,Financial,BE,175938,Hacking,https://krebsonsecurity.com/breach-0459
+460,2020-04-05,Tech Group,Education,GB,67182,Insider,https://cybernews.com/breach-0460
+461,2022-04-22,Data 3 Corp,Technology,NO,10299,Social Engineering,https://cybernews.com/breach-0461
+462,2021-01-22,Bank Group,Financial,CN,82924,Hacking,https://bleepingcomputer.com/breach-0462
+463,2024-12-31,Software Group,Media,FI,447752,Insider,https://infosecurity-magazine.com/breach-0463
+464,2021-05-18,Systems Services,Technology,BE,49030,Insider,https://krebsonsecurity.com/breach-0464
+465,2021-01-15,Bank Ltd,Financial,US,430982,Social Engineering,https://securityweek.com/breach-0465
+466,2021-12-13,Care Inc,Healthcare,JP,50855,System Error,https://infosecurity-magazine.com/breach-0466
+467,2022-02-23,Systems Corp,Education,NL,803576,Hacking,https://threatpost.com/breach-0467
+468,2021-08-23,Systems Systems,Manufacturing,DE,40771,Insider,https://infosecurity-magazine.com/breach-0468
+469,2020-01-12,Systems Systems,Transportation,CH,560108,Physical,https://krebsonsecurity.com/breach-0469
+470,2021-08-22,Cloud 1 Solutions,Education,NL,334291,System Error,https://bleepingcomputer.com/breach-0470
+471,2020-10-09,Data Ltd,Manufacturing,IN,82055,Hacking,https://bleepingcomputer.com/breach-0471
+472,2020-01-16,Software International LLC,Manufacturing,FI,461920,Insider,https://bleepingcomputer.com/breach-0472
+473,2020-05-19,Tech Services,Transportation,DE,142467,Hacking,https://infosecurity-magazine.com/breach-0473
+474,2020-03-07,Data Corp,Manufacturing,GB,136695,System Error,https://therecord.media/breach-0474
+475,2020-04-08,Finance Global Inc,Financial,BR,112070,Social Engineering,https://infosecurity-magazine.com/breach-0475
+476,2024-10-12,State 3 Ltd,Government,DE,201235,Hacking,https://krebsonsecurity.com/breach-0476
+477,2020-03-09,Tech Inc,Manufacturing,GB,51149,Insider,https://therecord.media/breach-0477
+478,2020-08-16,Cloud Inc,Media,ES,454613,Insider,https://therecord.media/breach-0478
+479,2020-08-14,Capital 2 Services,Financial,NO,52097,Social Engineering,https://infosecurity-magazine.com/breach-0479
+480,2021-02-10,Tech International Services,Education,NO,184588,System Error,https://threatpost.com/breach-0480
+481,2020-11-12,Tech Systems,Transportation,AU,69655,Insider,https://cyberscoop.com/breach-0481
+482,2020-06-19,Store Services,Retail,BE,17270,Physical,https://infosecurity-magazine.com/breach-0482
+483,2020-04-25,Tech Global Services,Transportation,IN,173347,Insider,https://darkreading.com/breach-0483
+484,2021-07-09,Systems Solutions,Energy,CA,260693,Hacking,https://krebsonsecurity.com/breach-0484
+485,2021-01-02,Data Solutions,Technology,DE,178430,Physical,https://darkreading.com/breach-0485
+486,2024-12-31,Systems Corp,Energy,ES,224906,Hacking,https://infosecurity-magazine.com/breach-0486
+487,2020-01-01,Systems 3 Systems,Transportation,GB,454237,Social Engineering,https://infosecurity-magazine.com/breach-0487
+488,2020-10-19,Systems Ltd,Energy,NL,189656,System Error,https://cyberscoop.com/breach-0488
+489,2024-12-31,Cloud National LLC,Technology,CN,192061,Hacking,https://threatpost.com/breach-0489
+490,2023-09-25,Systems Solutions,Energy,NO,174593,Social Engineering,https://infosecurity-magazine.com/breach-0490
+491,2020-12-02,Retail Services,Retail,FR,30299,System Error,https://infosecurity-magazine.com/breach-0491
+492,2021-05-26,Care Inc,Healthcare,GB,115104,Physical,https://therecord.media/breach-0492
+493,2021-03-27,Systems National Inc,Transportation,CA,27726,Physical,https://krebsonsecurity.com/breach-0493
+494,2022-07-06,Software Services,Education,CH,164025,System Error,https://darkreading.com/breach-0494
+495,2021-12-23,Systems Group,Technology,GB,224698,Hacking,https://krebsonsecurity.com/breach-0495
+496,2020-01-17,Agency 1 Inc,Government,BE,345682,Insider,https://darkreading.com/breach-0496
+497,2022-04-03,Department LLC,Government,US,499395,Hacking,https://darkreading.com/breach-0497
+498,2020-05-01,Commerce Corp,Retail,DK,25377,Insider,https://therecord.media/breach-0498
+499,2021-06-08,Data Corp,Technology,JP,328362,System Error,https://therecord.media/breach-0499
+500,2022-04-14,Department Ltd,Government,DK,293526,Insider,https://krebsonsecurity.com/breach-0500

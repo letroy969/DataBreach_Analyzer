@@ -1,0 +1,11 @@
+industry,category,risk_level
+Healthcare,Critical Infrastructure,High
+Financial,Critical Infrastructure,High
+Technology,Information Technology,Medium
+Retail,Consumer Services,Medium
+Government,Public Sector,High
+Education,Public Sector,Medium
+Energy,Critical Infrastructure,High
+Manufacturing,Industrial,Medium
+Transportation,Critical Infrastructure,High
+Media,Consumer Services,Low

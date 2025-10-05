@@ -1,0 +1,6 @@
+severity_level,records_min,records_max,description
+Low,0,1000,Small breach with minimal impact
+Medium,1001,10000,Moderate breach requiring attention
+High,10001,100000,Large breach with significant impact
+Critical,100001,1000000,Major breach with severe consequences
+Catastrophic,1000001,999999999999,Massive breach with devastating impact

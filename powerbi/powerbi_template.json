@@ -1,0 +1,323 @@
+{
+  "name": "Data Breach Insights Report",
+  "description": "Professional Power BI dashboard for data breach analysis",
+  "version": "1.0.0",
+  "pages": [
+    {
+      "name": "Overview",
+      "description": "Landing page with key metrics and trends",
+      "visuals": [
+        {
+          "type": "KPI Card",
+          "title": "Total Breaches",
+          "measure": "TotalBreaches",
+          "position": {"x": 0, "y": 0, "width": 200, "height": 100}
+        },
+        {
+          "type": "KPI Card", 
+          "title": "Total Records Exposed",
+          "measure": "TotalRecords",
+          "position": {"x": 200, "y": 0, "width": 200, "height": 100}
+        },
+        {
+          "type": "KPI Card",
+          "title": "Average Breach Size", 
+          "measure": "AvgBreachSize",
+          "position": {"x": 400, "y": 0, "width": 200, "height": 100}
+        },
+        {
+          "type": "KPI Card",
+          "title": "Breaches This Year",
+          "measure": "BreachesThisYear", 
+          "position": {"x": 600, "y": 0, "width": 200, "height": 100}
+        },
+        {
+          "type": "Line Chart",
+          "title": "Breaches by Year",
+          "x_axis": "Year",
+          "y_axis": "Count of Breaches",
+          "legend": "Breach Type",
+          "position": {"x": 0, "y": 120, "width": 600, "height": 300}
+        },
+        {
+          "type": "Stacked Bar Chart",
+          "title": "Top Industries by Records",
+          "x_axis": "Industry",
+          "y_axis": "Sum of Records Exposed",
+          "color": "Breach Type",
+          "position": {"x": 600, "y": 120, "width": 400, "height": 300}
+        },
+        {
+          "type": "Table",
+          "title": "Recent Large Breaches",
+          "columns": ["Name", "Industry", "Country", "Date", "Records", "Type"],
+          "filter": "records_exposed >= 1000000",
+          "position": {"x": 0, "y": 440, "width": 1000, "height": 200}
+        }
+      ],
+      "slicers": [
+        {"field": "breach_date", "type": "Date Range"},
+        {"field": "industry", "type": "List"},
+        {"field": "country", "type": "List"},
+        {"field": "breach_type", "type": "List"}
+      ]
+    },
+    {
+      "name": "Geography",
+      "description": "Geographic analysis and mapping",
+      "visuals": [
+        {
+          "type": "Map",
+          "title": "Breach Distribution by Country",
+          "location": "Country",
+          "size": "Sum of Records Exposed",
+          "color": "Count of Breaches",
+          "position": {"x": 0, "y": 0, "width": 600, "height": 400}
+        },
+        {
+          "type": "Bar Chart",
+          "title": "Top 15 Countries by Breaches",
+          "x_axis": "Country",
+          "y_axis": "Count of Breaches",
+          "position": {"x": 600, "y": 0, "width": 400, "height": 200}
+        },
+        {
+          "type": "Donut Chart",
+          "title": "Regional Distribution",
+          "category": "Region",
+          "values": "Sum of Records Exposed",
+          "position": {"x": 600, "y": 220, "width": 400, "height": 180}
+        },
+        {
+          "type": "Table",
+          "title": "Country Details",
+          "columns": ["Country", "Region", "Breach Count", "Total Records", "Avg Size"],
+          "position": {"x": 0, "y": 420, "width": 1000, "height": 200}
+        }
+      ],
+      "slicers": [
+        {"field": "region", "type": "List"},
+        {"field": "year", "type": "List"},
+        {"field": "industry", "type": "List"}
+      ]
+    },
+    {
+      "name": "Industry",
+      "description": "Industry-specific analysis and trends",
+      "visuals": [
+        {
+          "type": "Clustered Bar Chart",
+          "title": "Breaches by Industry and Type",
+          "x_axis": "Industry",
+          "y_axis": "Count of Breaches",
+          "legend": "Breach Type",
+          "position": {"x": 0, "y": 0, "width": 500, "height": 300}
+        },
+        {
+          "type": "Line Chart",
+          "title": "Industry Trends Over Time",
+          "x_axis": "Year",
+          "y_axis": "Count of Breaches",
+          "legend": "Industry",
+          "position": {"x": 500, "y": 0, "width": 500, "height": 300}
+        },
+        {
+          "type": "Scatter Plot",
+          "title": "Breach Size vs Frequency",
+          "x_axis": "Count of Breaches",
+          "y_axis": "Average Records Exposed",
+          "size": "Total Records Exposed",
+          "color": "Industry",
+          "position": {"x": 0, "y": 320, "width": 500, "height": 300}
+        },
+        {
+          "type": "Table",
+          "title": "Industry Performance Metrics",
+          "columns": ["Industry", "Breach Count", "Total Records", "Avg Size", "Risk Level"],
+          "position": {"x": 500, "y": 320, "width": 500, "height": 300}
+        }
+      ],
+      "slicers": [
+        {"field": "industry", "type": "List"},
+        {"field": "breach_type", "type": "List"},
+        {"field": "year", "type": "Range"}
+      ]
+    },
+    {
+      "name": "Incident Explorer",
+      "description": "Detailed incident analysis and exploration",
+      "visuals": [
+        {
+          "type": "Data Table",
+          "title": "All Breaches",
+          "columns": ["Name", "Industry", "Country", "Date", "Records", "Type", "Source URL"],
+          "search": true,
+          "sortable": true,
+          "position": {"x": 0, "y": 0, "width": 800, "height": 400}
+        },
+        {
+          "type": "Histogram",
+          "title": "Breach Size Distribution",
+          "x_axis": "Records Exposed (binned)",
+          "y_axis": "Count of Breaches",
+          "position": {"x": 800, "y": 0, "width": 200, "height": 200}
+        },
+        {
+          "type": "Pie Chart",
+          "title": "Breach Type Distribution",
+          "category": "Breach Type",
+          "values": "Count of Breaches",
+          "position": {"x": 800, "y": 220, "width": 200, "height": 180}
+        },
+        {
+          "type": "Card",
+          "title": "Selected Breach Details",
+          "fields": ["Name", "Industry", "Country", "Date", "Records", "Type"],
+          "position": {"x": 0, "y": 420, "width": 1000, "height": 100}
+        }
+      ],
+      "slicers": [
+        {"field": "breach_date", "type": "Date Range"},
+        {"field": "industry", "type": "List"},
+        {"field": "country", "type": "List"},
+        {"field": "records_exposed", "type": "Range"}
+      ]
+    },
+    {
+      "name": "Executive",
+      "description": "PDF-ready executive summary",
+      "layout": "portrait",
+      "visuals": [
+        {
+          "type": "Text Box",
+          "content": "Data Breach Insights Report",
+          "font_size": 24,
+          "font_weight": "bold",
+          "position": {"x": 0, "y": 0, "width": 1000, "height": 50}
+        },
+        {
+          "type": "Text Box",
+          "content": "Executive Summary - " + FORMAT(TODAY(), "MMMM YYYY"),
+          "font_size": 14,
+          "position": {"x": 0, "y": 60, "width": 1000, "height": 30}
+        },
+        {
+          "type": "KPI Card",
+          "title": "Total Breaches",
+          "measure": "TotalBreaches",
+          "position": {"x": 0, "y": 100, "width": 200, "height": 80}
+        },
+        {
+          "type": "KPI Card",
+          "title": "Total Records",
+          "measure": "TotalRecords",
+          "position": {"x": 200, "y": 100, "width": 200, "height": 80}
+        },
+        {
+          "type": "KPI Card",
+          "title": "Avg Size",
+          "measure": "AvgBreachSize",
+          "position": {"x": 400, "y": 100, "width": 200, "height": 80}
+        },
+        {
+          "type": "Line Chart",
+          "title": "Breach Trends",
+          "x_axis": "Year",
+          "y_axis": "Count of Breaches",
+          "position": {"x": 0, "y": 200, "width": 600, "height": 300}
+        },
+        {
+          "type": "Bar Chart",
+          "title": "Top Industries",
+          "x_axis": "Industry",
+          "y_axis": "Sum of Records Exposed",
+          "position": {"x": 600, "y": 200, "width": 400, "height": 300}
+        },
+        {
+          "type": "Text Box",
+          "content": "Key Insights:\n• Healthcare and Financial sectors are most targeted\n• Insider threats represent 28% of all breaches\n• Breach frequency has increased 15% year-over-year",
+          "font_size": 12,
+          "position": {"x": 0, "y": 520, "width": 1000, "height": 100}
+        }
+      ]
+    }
+  ],
+  "data_model": {
+    "tables": [
+      {
+        "name": "breaches",
+        "columns": [
+          {"name": "id", "type": "Whole Number"},
+          {"name": "breach_date", "type": "Date"},
+          {"name": "name", "type": "Text"},
+          {"name": "industry", "type": "Text"},
+          {"name": "country", "type": "Text"},
+          {"name": "records_exposed", "type": "Whole Number"},
+          {"name": "breach_type", "type": "Text"},
+          {"name": "source_url", "type": "Text"}
+        ]
+      },
+      {
+        "name": "industry_lookup",
+        "columns": [
+          {"name": "industry", "type": "Text"},
+          {"name": "category", "type": "Text"},
+          {"name": "risk_level", "type": "Text"}
+        ]
+      },
+      {
+        "name": "country_lookup",
+        "columns": [
+          {"name": "country_code", "type": "Text"},
+          {"name": "country_name", "type": "Text"},
+          {"name": "region", "type": "Text"},
+          {"name": "gdp_per_capita", "type": "Decimal Number"}
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "from_table": "breaches",
+        "from_column": "industry",
+        "to_table": "industry_lookup",
+        "to_column": "industry"
+      },
+      {
+        "from_table": "breaches",
+        "from_column": "country",
+        "to_table": "country_lookup",
+        "to_column": "country_code"
+      }
+    ]
+  },
+  "dax_measures": [
+    {
+      "name": "TotalBreaches",
+      "formula": "COUNTROWS(breaches)"
+    },
+    {
+      "name": "TotalRecords",
+      "formula": "SUM(breaches[records_exposed])"
+    },
+    {
+      "name": "AvgBreachSize",
+      "formula": "AVERAGE(breaches[records_exposed])"
+    },
+    {
+      "name": "BreachesThisYear",
+      "formula": "CALCULATE([TotalBreaches], YEAR(breaches[breach_date]) = YEAR(TODAY()))"
+    },
+    {
+      "name": "YoY_Breaches_Change",
+      "formula": "DIVIDE([BreachesThisYear] - [BreachesLastYear], [BreachesLastYear], 0)"
+    }
+  ],
+  "theme": {
+    "primary_color": "#0b2948",
+    "accent_color": "#1fb6b6",
+    "highlight_color": "#ffb86b",
+    "font_family": "Segoe UI",
+    "header_font_size": 16,
+    "body_font_size": 12
+  }
+}

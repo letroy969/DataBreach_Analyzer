@@ -1,0 +1,21 @@
+country_code,country_name,region,gdp_per_capita
+US,United States,North America,65000
+GB,United Kingdom,Europe,45000
+CA,Canada,North America,50000
+AU,Australia,Oceania,55000
+DE,Germany,Europe,50000
+FR,France,Europe,45000
+JP,Japan,Asia,40000
+IN,India,Asia,2000
+BR,Brazil,South America,8000
+CN,China,Asia,10000
+IT,Italy,Europe,35000
+ES,Spain,Europe,30000
+NL,Netherlands,Europe,55000
+SE,Sweden,Europe,55000
+NO,Norway,Europe,75000
+DK,Denmark,Europe,60000
+FI,Finland,Europe,50000
+CH,Switzerland,Europe,80000
+AT,Austria,Europe,50000
+BE,Belgium,Europe,45000

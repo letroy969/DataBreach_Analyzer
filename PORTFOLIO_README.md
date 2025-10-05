@@ -219,7 +219,7 @@ This is a demonstration project. For questions or suggestions, please open an is
 
 **Your Name** - [Your Email](mailto:your.email@example.com)
 
-**Project Link**: [https://github.com/YOUR_USERNAME/data-breach-insights-report](https://github.com/YOUR_USERNAME/data-breach-insights-report)
+**Project Link**: [https://github.com/letroy969/Databreach_insight-report](https://github.com/letroy969/Databreach_insight-report)
 
 **Portfolio**: [https://your-portfolio-website.com](https://your-portfolio-website.com)
 

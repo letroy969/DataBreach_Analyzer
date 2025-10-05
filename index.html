@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Breach Insights Report - Live Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0b2948 0%, #1a3d5c 50%, #0b2948 100%);
+            color: white;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(31, 182, 182, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #1fb6b6, #ffb86b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(31, 182, 182, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-10px);
+            border-color: #1fb6b6;
+        }
+        
+        .metric-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1fb6b6;
+            margin-bottom: 10px;
+        }
+        
+        .metric-label {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 1px solid rgba(31, 182, 182, 0.2);
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1fb6b6;
+            text-align: center;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .tech-tag {
+            background: rgba(31, 182, 182, 0.2);
+            color: #1fb6b6;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 1px solid rgba(31, 182, 182, 0.4);
+            font-weight: 600;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #1fb6b6, #ffb86b);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .insights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .insight-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #1fb6b6;
+        }
+        
+        .insight-card h3 {
+            color: #1fb6b6;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(31, 182, 182, 0.3);
+            margin-top: 60px;
+        }
+        
+        .github-link {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px;
+            border: 1px solid rgba(31, 182, 182, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background: rgba(31, 182, 182, 0.2);
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-stack {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Data Breach Insights Report</h1>
+            <p>Professional data analysis project analyzing 500+ cybersecurity breach incidents using Python, Power BI, Excel, and machine learning. Features interactive dashboards, predictive models, and executive reporting.</p>
+        </div>
+        
+        <div class="metrics">
+            <div class="metric-card">
+                <div class="metric-number">500+</div>
+                <div class="metric-label">Breach Records Analyzed</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">87%</div>
+                <div class="metric-label">ML Model Accuracy</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">4</div>
+                <div class="metric-label">Dashboard Pages</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">28%</div>
+                <div class="metric-label">Insider Threat Rate</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Key Insights Discovered</h2>
+            <div class="insights">
+                <div class="insight-card">
+                    <h3>Industry Risk Analysis</h3>
+                    <p>Transportation sector has highest risk with 25.9M records exposed, representing 18.1% of all compromised data.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Attack Vector Patterns</h3>
+                    <p>Insider threats represent 28% of all breaches, indicating significant security vulnerability requiring immediate attention.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Temporal Trends</h3>
+                    <p>Breach frequency declining but impact increasing, with recent years showing larger, more sophisticated attacks.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Predictive Capabilities</h3>
+                    <p>Machine learning model predicts large breaches with 87% accuracy using industry type, breach type, and temporal factors.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🛠️ Technologies Used</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Excel</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Jupyter</span>
+                <span class="tech-tag">Matplotlib</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Project Deliverables</h2>
+            <div class="download-section">
+                <h3>Download and Explore</h3>
+                <p>All project files are available in the GitHub repository. Key deliverables include:</p>
+                <br>
+                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/excel/breach_analysis.xlsx" class="download-btn">
+                    📈 Download Excel Workbook
+                </a>
+                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/powerbi/breaches_for_powerbi.csv" class="download-btn">
+                    📊 Download Power BI Data
+                </a>
+                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/docs/case_study.md" class="download-btn">
+                    📋 Download Case Study
+                </a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 How to Use This Project</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <h3>For Recruiters & Hiring Managers:</h3>
+                <ol style="margin: 20px 0; padding-left: 20px;">
+                    <li><strong>View the Code:</strong> Browse the GitHub repository to see clean, documented code</li>
+                    <li><strong>Download Excel:</strong> Open the Excel workbook to see pivot tables and advanced formulas</li>
+                    <li><strong>Review Documentation:</strong> Read the comprehensive case study and technical documentation</li>
+                    <li><strong>Run the Analysis:</strong> Follow the setup instructions to run the Python scripts locally</li>
+                </ol>
+                
+                <h3>For Technical Review:</h3>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li>Complete data pipeline from CSV to executive reports</li>
+                    <li>Machine learning model with 87% accuracy in breach prediction</li>
+                    <li>Professional Power BI dashboard with 4 interactive pages</li>
+                    <li>Advanced Excel workbook with pivot tables and XLOOKUP formulas</li>
+                    <li>Comprehensive SQL queries and database schema</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3>🔗 Project Links</h3>
+            <a href="https://github.com/letroy969/Databreach_insight-report" class="github-link" target="_blank">
+                🐙 View on GitHub
+            </a>
+            <a href="https://github.com/letroy969/Databreach_insight-report/archive/main.zip" class="github-link" target="_blank">
+                📦 Download ZIP
+            </a>
+            <br><br>
+            <p>Built with ❤️ by <strong>Sihle Dladla</strong> | ICT Diploma Student | University of Mpumalanga</p>
+            <p>Contact: Lindaletroy27@gmail.com | 06090410445</p>
+        </div>
+    </div>
+</body>
+</html>

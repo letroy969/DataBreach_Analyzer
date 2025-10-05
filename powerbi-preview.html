@@ -255,11 +255,14 @@
     <div class="container">
         <div class="header">
             <h1><i class="fas fa-chart-bar"></i> Power BI Data Preview</h1>
-            <p>Enhanced datasets and lookup tables ready for Power BI dashboard creation and analysis</p>
+            <p>Enhanced datasets and lookup tables ready for Power BI dashboard creation and analysis. Download the complete Excel workbook with all data and analysis tools.</p>
             
             <div class="download-section">
-                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/powerbi/breaches_for_powerbi.csv" class="btn btn-primary" download="breaches_for_powerbi.csv">
-                    <i class="fas fa-download"></i> Download Main Data
+                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/excel/breach_analysis.xlsx" class="btn btn-primary" download="breach_analysis.xlsx">
+                    <i class="fas fa-file-excel"></i> Download Excel Workbook
+                </a>
+                <a href="csv-download.html" class="btn btn-secondary">
+                    <i class="fas fa-file-csv"></i> Download CSV Files
                 </a>
                 <a href="#industry-lookup" class="btn btn-secondary">
                     <i class="fas fa-industry"></i> Industry Lookup
@@ -780,11 +783,27 @@
         </div>
 
         <div class="data-info">
-            <h2 style="color: var(--accent-color); margin-bottom: 1rem;">Dataset Information</h2>
+            <h2 style="color: var(--accent-color); margin-bottom: 1rem;">Excel Workbook Contents</h2>
             <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                This dataset contains 500+ synthetic data breach records with 14 columns of information, 
-                designed for Power BI dashboard creation and advanced analytics.
+                The downloadable Excel workbook contains 10 tabs with comprehensive analysis tools, 
+                pivot tables, charts, and all the data needed for Power BI dashboard creation.
             </p>
+            
+            <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--border-color);">
+                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Excel Workbook Tabs:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.9rem;">
+                    <div><strong>RAW:</strong> Raw data import</div>
+                    <div><strong>CLEAN:</strong> Cleaned data with formulas</div>
+                    <div><strong>PIVOT_BreachesByYear:</strong> Yearly analysis</div>
+                    <div><strong>PIVOT_IndustryRecords:</strong> Industry breakdown</div>
+                    <div><strong>CHARTS:</strong> Interactive charts</div>
+                    <div><strong>Executive Summary:</strong> Key insights</div>
+                    <div><strong>SQL_Queries:</strong> Query examples</div>
+                    <div><strong>Industry_Lookup:</strong> Industry codes</div>
+                    <div><strong>Country_Lookup:</strong> Country data</div>
+                    <div><strong>Severity_Levels:</strong> Risk classifications</div>
+                </div>
+            </div>
             
             <div class="info-grid">
                 <div class="info-card">

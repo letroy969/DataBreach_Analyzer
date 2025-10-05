@@ -2,53 +2,53 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-        
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        
-    - name: Generate sample data
-      run: |
-        python scripts/produce_sample_csv.py
-        
-    - name: Create Excel workbook
-      run: |
-        python scripts/create_excel_workbook.py
-        
-    - name: Prepare Power BI data
-      run: |
-        python scripts/prepare_powerbi_data.py
-        
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
-        exclude_assets: |
-          .github
-          data.db
-          *.py
-          scripts/
-          notebooks/
-          sql/
-          powerbi/
-          excel/
-          docs/
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate sample data
+        run: |
+          python scripts/produce_sample_csv.py
+
+      - name: Create Excel workbook
+        run: |
+          python scripts/create_excel_workbook.py
+
+      - name: Prepare Power BI data
+        run: |
+          python scripts/prepare_powerbi_data.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          exclude_assets: |
+            .github
+            data.db
+            *.py
+            scripts/
+            notebooks/
+            sql/
+            powerbi/
+            excel/
+            docs/

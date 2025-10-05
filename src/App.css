@@ -1,0 +1,202 @@
+/* Custom styles for the Data Breach Insights Dashboard */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: linear-gradient(
+    135deg,
+    rgba(11, 41, 72, 0.1) 0%,
+    rgba(31, 182, 182, 0.1) 100%
+  );
+  border: 1px solid rgba(11, 41, 72, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(11, 41, 72, 0.15);
+  border-color: rgba(31, 182, 182, 0.3);
+}
+
+.insight-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 184, 107, 0.1) 0%,
+    rgba(31, 182, 182, 0.1) 100%
+  );
+  border: 1px solid rgba(255, 184, 107, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.trend-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.trend-up {
+  color: #10b981;
+}
+
+.trend-down {
+  color: #ef4444;
+}
+
+.trend-neutral {
+  color: #3b82f6;
+}
+
+.data-table {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.data-table th {
+  background: rgba(11, 41, 72, 0.8);
+  color: #f8fafc;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+}
+
+.data-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+}
+
+.data-table tr:hover {
+  background: rgba(31, 182, 182, 0.1);
+}
+
+.search-input {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1fb6b6;
+  box-shadow: 0 0 0 3px rgba(31, 182, 182, 0.1);
+}
+
+.filter-select {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: #f8fafc;
+}
+
+.chart-tooltip {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: #f8fafc;
+  font-size: 0.875rem;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(31, 182, 182, 0.3);
+  border-radius: 50%;
+  border-top-color: #1fb6b6;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .data-table {
+    font-size: 0.875rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem;
+  }
+}
+

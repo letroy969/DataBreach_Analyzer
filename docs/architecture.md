@@ -1,288 +1,195 @@
-# Data Breach Insights Report - System Architecture
+# Data Breach Insights Report - Architecture Documentation
 
-## 🏗️ Architecture Overview
+## 🏗️ System Architecture
 
-This document describes the system architecture for the Data Breach Insights Report project, including data flow, components, and technology stack.
+### Overview
 
-## 📊 System Architecture Diagram
+The Data Breach Insights Report is a modern full-stack web application built with React and designed for professional data analysis. The architecture follows a component-based, responsive design pattern optimized for both desktop and mobile experiences.
 
-```mermaid
-graph TB
-    subgraph "Data Sources"
-        A[Public APIs] --> B[Kaggle Dataset]
-        A --> C[Privacy Rights Clearinghouse]
-        A --> D[Have I Been Pwned API]
-    end
-    
-    subgraph "Data Processing Layer"
-        B --> E[Python Scripts]
-        C --> E
-        D --> E
-        E --> F[Data Cleaning & Validation]
-        F --> G[Sample Data Generator]
-    end
-    
-    subgraph "Storage Layer"
-        G --> H[CSV Files]
-        H --> I[PostgreSQL Database]
-        H --> J[SQLite Database]
-        I --> K[Data Warehouse]
-    end
-    
-    subgraph "Analytics Layer"
-        K --> L[SQL Queries]
-        L --> M[Python Analytics]
-        M --> N[Jupyter Notebooks]
-        N --> O[Machine Learning Models]
-    end
-    
-    subgraph "Visualization Layer"
-        L --> P[Excel Workbooks]
-        L --> Q[Power BI Dashboards]
-        M --> R[Interactive Charts]
-        O --> S[Predictive Analytics]
-    end
-    
-    subgraph "Output Layer"
-        P --> T[Executive Reports]
-        Q --> T
-        R --> T
-        S --> T
-        T --> U[PDF Reports]
-        T --> V[Interactive Dashboards]
-    end
-    
-    subgraph "Infrastructure"
-        W[Docker Containers] --> I
-        X[Cloud Storage] --> K
-        Y[CI/CD Pipeline] --> E
-    end
-    
-    style A fill:#e1f5fe
-    style E fill:#f3e5f5
-    style I fill:#e8f5e8
-    style L fill:#fff3e0
-    style P fill:#fce4ec
-    style Q fill:#f1f8e9
-    style T fill:#e0f2f1
+### Technology Stack
+
+#### Frontend
+
+- **React 18** - Component-based UI framework
+- **Vite** - Fast build tool and development server
+- **TailwindCSS** - Utility-first CSS framework
+- **DaisyUI** - Component library for consistent design
+- **Recharts** - Interactive data visualization library
+- **Framer Motion** - Animation library for smooth transitions
+
+#### Data Processing
+
+- **JavaScript ES6+** - Modern data manipulation and processing
+- **Custom Algorithms** - Statistical analysis and correlation calculations
+- **CSV Processing** - Real-time data parsing and cleaning
+- **Context API** - State management for data and theme
+
+### Component Architecture
+
+```
+src/
+├── components/           # Reusable UI components
+│   ├── charts/          # Chart components (Recharts)
+│   │   ├── BreachesByYearChart.jsx
+│   │   ├── IndustryDistributionChart.jsx
+│   │   ├── RegionalDistributionChart.jsx
+│   │   └── RecordsVsCostChart.jsx
+│   ├── Header.jsx       # Navigation header with theme toggle
+│   ├── KPICards.jsx     # Key performance indicators
+│   ├── DataTable.jsx    # Interactive data table
+│   └── AnalyticsInsights.jsx # Analytics insights cards
+├── contexts/            # React context providers
+│   ├── DataContext.jsx # Data management and processing
+│   └── ThemeContext.jsx # Theme switching (dark/light)
+├── pages/              # Page components
+│   └── Dashboard.jsx   # Main dashboard page
+├── utils/              # Utility functions
+│   └── dataProcessor.js # Data processing and calculations
+└── App.jsx             # Main application component
 ```
 
-## 🔄 Data Flow Architecture
+### Data Flow
 
-```mermaid
-sequenceDiagram
-    participant DS as Data Sources
-    participant DP as Data Processing
-    participant DB as Database
-    participant AL as Analytics Layer
-    participant VZ as Visualization
-    participant OUT as Output
-    
-    DS->>DP: Raw Data Ingestion
-    DP->>DP: Data Cleaning & Validation
-    DP->>DB: Store Processed Data
-    DB->>AL: Query Data
-    AL->>AL: Statistical Analysis
-    AL->>AL: Machine Learning
-    AL->>VZ: Analytics Results
-    VZ->>OUT: Generate Reports
-    VZ->>OUT: Create Dashboards
-    OUT->>OUT: Export PDFs
-```
+1. **Data Loading** - CSV data is loaded from `/public/data/sample_breaches.csv`
+2. **Data Processing** - Raw data is processed through `dataProcessor.js`
+3. **State Management** - Processed data is stored in `DataContext`
+4. **Component Rendering** - Components consume data from context
+5. **User Interactions** - Filters, sorting, and exports update the display
 
-## 🏛️ Component Architecture
+### Key Features
 
-### 1. Data Ingestion Layer
-- **Python Scripts**: Automated data collection and processing
-- **APIs**: Real-time data from external sources
-- **File Processing**: CSV, JSON, and other data formats
-- **Data Validation**: Quality checks and error handling
+#### Data Processing Pipeline
 
-### 2. Data Storage Layer
-- **PostgreSQL**: Primary relational database
-- **SQLite**: Local development and testing
-- **CSV Files**: Data exchange and backup
-- **Data Warehouse**: Historical data storage
+- **Input**: CSV file with breach records
+- **Cleaning**: Missing value handling, data validation
+- **Transformation**: Date parsing, numeric formatting, calculations
+- **Enrichment**: Cost calculations, trend analysis, correlations
+- **Output**: Structured data for visualization
 
-### 3. Analytics Engine
-- **SQL Engine**: Complex queries and aggregations
-- **Python Analytics**: Statistical analysis and ML
-- **Jupyter Notebooks**: Interactive analysis
-- **Machine Learning**: Predictive models
+#### Responsive Design
 
-### 4. Visualization Platform
-- **Excel Workbooks**: Pivot tables and charts
-- **Power BI**: Interactive dashboards
-- **Plotly**: Web-based visualizations
-- **Matplotlib/Seaborn**: Static charts
+- **Mobile First**: Optimized for mobile devices (320px+)
+- **Breakpoints**:
+  - Mobile: 320px - 767px
+  - Tablet: 768px - 1199px
+  - Desktop: 1200px+
+- **Grid System**: CSS Grid with auto-fit columns
+- **Typography**: Responsive font sizing
 
-### 5. Output Generation
-- **Report Templates**: Standardized formats
-- **PDF Export**: Executive summaries
-- **Interactive Dashboards**: Real-time analytics
-- **API Endpoints**: Data access
+#### Theme System
 
-## 🛠️ Technology Stack
+- **Dark Theme**: Default professional theme
+- **Light Theme**: Alternative light theme
+- **System Preference**: Automatic detection of user preference
+- **Persistence**: Theme choice saved in localStorage
 
-### Backend Technologies
-- **Python 3.8+**: Core programming language
-- **Pandas**: Data manipulation and analysis
-- **NumPy**: Numerical computing
-- **Scikit-learn**: Machine learning
-- **SQLAlchemy**: Database ORM
-- **Psycopg2**: PostgreSQL connector
+### Performance Optimizations
 
-### Database Technologies
-- **PostgreSQL 15**: Primary database
-- **SQLite 3**: Local development
-- **Redis**: Caching layer (optional)
+#### Code Splitting
 
-### Visualization Technologies
-- **Power BI Desktop**: Business intelligence
-- **Excel 2016+**: Spreadsheet analysis
-- **Plotly**: Interactive web visualizations
-- **Matplotlib**: Static plotting
-- **Seaborn**: Statistical visualizations
+- **Lazy Loading**: Components loaded on demand
+- **Bundle Splitting**: Separate chunks for vendor libraries
+- **Tree Shaking**: Unused code elimination
 
-### Infrastructure Technologies
-- **Docker**: Containerization
-- **Docker Compose**: Multi-container orchestration
-- **Git**: Version control
-- **GitHub Actions**: CI/CD pipeline
+#### Data Optimization
 
-### Development Tools
-- **Jupyter Notebooks**: Interactive development
-- **VS Code**: Code editor
-- **Git**: Version control
-- **Pytest**: Testing framework
+- **Memoization**: React.memo for expensive components
+- **Virtual Scrolling**: For large data tables (future enhancement)
+- **Debounced Search**: Optimized search performance
 
-## 📊 Data Architecture
+#### Caching
 
-### Data Models
+- **Local Storage**: Theme preferences and user settings
+- **Memory Caching**: Processed data cached in context
+- **CDN Ready**: Static assets optimized for CDN delivery
 
-#### Breaches Table (Fact Table)
-```sql
-CREATE TABLE breaches (
-    id INTEGER PRIMARY KEY,
-    breach_date DATE NOT NULL,
-    name TEXT NOT NULL,
-    industry TEXT NOT NULL,
-    country TEXT NOT NULL,
-    records_exposed BIGINT NOT NULL,
-    breach_type TEXT NOT NULL,
-    source_url TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
+### Security Considerations
 
-#### Industry Lookup (Dimension Table)
-```sql
-CREATE TABLE industry_lookup (
-    industry TEXT PRIMARY KEY,
-    category TEXT,
-    risk_level TEXT
-);
-```
+#### Data Privacy
 
-#### Country Lookup (Dimension Table)
-```sql
-CREATE TABLE country_lookup (
-    country_code TEXT PRIMARY KEY,
-    country_name TEXT,
-    region TEXT,
-    gdp_per_capita REAL
-);
-```
+- **No External APIs**: All data processing happens client-side
+- **No Personal Data**: Sample data only, no real breach records
+- **CSV Export**: User-controlled data export
 
-### Data Relationships
-- **One-to-Many**: Industry → Breaches
-- **One-to-Many**: Country → Breaches
-- **Many-to-One**: Breaches → Severity Level
+#### Code Security
 
-## 🔐 Security Architecture
+- **ESLint**: Code quality and security linting
+- **Dependency Scanning**: Regular security updates
+- **Input Validation**: All user inputs validated
 
-### Data Security
-- **Encryption at Rest**: Database encryption
-- **Encryption in Transit**: TLS/SSL connections
-- **Access Control**: Role-based permissions
-- **Data Masking**: PII protection
+### Deployment Architecture
 
-### Network Security
-- **Firewall Rules**: Network segmentation
-- **VPN Access**: Secure remote connections
-- **API Security**: Authentication and authorization
-- **Monitoring**: Security event logging
+#### Development
 
-## 📈 Scalability Considerations
+- **Local Server**: Vite dev server on localhost:3000
+- **Hot Reload**: Instant updates during development
+- **Source Maps**: Debug-friendly development builds
 
-### Horizontal Scaling
-- **Database Sharding**: Distribute data across multiple databases
-- **Load Balancing**: Distribute requests across multiple servers
-- **Microservices**: Decompose monolithic applications
-- **Container Orchestration**: Kubernetes for container management
+#### Production
 
-### Vertical Scaling
-- **Database Optimization**: Query optimization and indexing
-- **Caching**: Redis for frequently accessed data
-- **CDN**: Content delivery network for static assets
-- **Resource Monitoring**: Performance tracking and alerting
+- **Static Build**: Optimized static files
+- **CDN Ready**: Can be deployed to any static hosting
+- **Environment Variables**: Configurable API endpoints
 
-## 🚀 Deployment Architecture
+### Scalability Considerations
 
-### Development Environment
-- **Local Development**: SQLite database
-- **Docker Compose**: Multi-container setup
-- **Jupyter Notebooks**: Interactive development
-- **Git**: Version control and collaboration
+#### Current Limitations
 
-### Production Environment
-- **Cloud Platform**: AWS/Azure/GCP
-- **Managed Database**: PostgreSQL service
-- **Container Registry**: Docker image storage
-- **CI/CD Pipeline**: Automated deployment
+- **Client-Side Only**: All processing happens in browser
+- **Sample Data**: Limited to 500 records
+- **No Backend**: No server-side processing
 
-### Monitoring and Logging
-- **Application Logs**: Structured logging
-- **Database Monitoring**: Performance metrics
-- **Error Tracking**: Exception monitoring
-- **Uptime Monitoring**: Service availability
+#### Future Enhancements
 
-## 🔄 Data Pipeline Architecture
+- **API Integration**: Real-time data feeds
+- **Database Backend**: PostgreSQL/MongoDB integration
+- **Microservices**: Separate data processing service
+- **Caching Layer**: Redis for performance
 
-### ETL Process
-1. **Extract**: Data from various sources
-2. **Transform**: Clean, validate, and enrich data
-3. **Load**: Store in target database
-4. **Validate**: Quality checks and reconciliation
+### Monitoring and Analytics
 
-### Real-time Processing
-- **Stream Processing**: Apache Kafka for real-time data
-- **Event Sourcing**: Capture all data changes
-- **CQRS**: Separate read and write models
-- **Microservices**: Independent service deployment
+#### Performance Metrics
 
-## 📋 Best Practices
+- **Load Time**: Initial page load performance
+- **Render Time**: Component rendering performance
+- **User Interactions**: Click tracking and analytics
 
-### Data Management
-- **Data Lineage**: Track data flow and transformations
-- **Data Quality**: Automated validation and monitoring
-- **Data Governance**: Policies and procedures
-- **Backup and Recovery**: Regular backups and testing
+#### Error Handling
 
-### Development Practices
-- **Code Review**: Peer review process
-- **Testing**: Unit, integration, and end-to-end tests
-- **Documentation**: Comprehensive documentation
-- **Version Control**: Git branching strategy
+- **Try-Catch Blocks**: Comprehensive error handling
+- **Fallback Data**: Sample data when CSV fails to load
+- **User Feedback**: Clear error messages and loading states
 
-### Security Practices
-- **Least Privilege**: Minimum required access
-- **Defense in Depth**: Multiple security layers
-- **Regular Updates**: Security patches and updates
-- **Incident Response**: Security incident procedures
+### Development Workflow
+
+#### Code Quality
+
+- **ESLint**: JavaScript linting with React rules
+- **Prettier**: Consistent code formatting
+- **Git Hooks**: Pre-commit quality checks
+- **Code Reviews**: Peer review process
+
+#### Testing Strategy
+
+- **Unit Tests**: Component testing (future)
+- **Integration Tests**: Data flow testing (future)
+- **E2E Tests**: User journey testing (future)
+
+### Documentation
+
+#### Code Documentation
+
+- **JSDoc Comments**: Function and component documentation
+- **README**: Comprehensive project documentation
+- **Architecture Docs**: System design documentation
+- **API Docs**: Data processing function documentation
+
+#### User Documentation
+
+- **Getting Started**: Installation and setup guide
+- **Feature Guide**: How to use dashboard features
+- **Troubleshooting**: Common issues and solutions
 
 ---
 
-**Architecture Version**: 1.0  
-**Last Updated**: January 15, 2024  
-**Next Review**: April 15, 2024
+_This architecture supports the current requirements while providing a foundation for future enhancements and scalability._

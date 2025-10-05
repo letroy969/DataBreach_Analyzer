@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-base-300;
+  }
+
+  body {
+    @apply bg-base-100 text-base-content;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .chart-container {
+    @apply bg-base-200 rounded-lg p-4 border border-base-300;
+  }
+
+  .kpi-card {
+    @apply bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-xl p-6;
+  }
+
+  .stat-number {
+    @apply text-3xl font-bold text-primary;
+  }
+
+  .stat-label {
+    @apply text-sm text-base-content/70 font-medium;
+  }
+
+  .trend-up {
+    @apply text-success;
+  }
+
+  .trend-down {
+    @apply text-error;
+  }
+
+  .trend-neutral {
+    @apply text-info;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

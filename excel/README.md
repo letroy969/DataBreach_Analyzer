@@ -7,17 +7,19 @@ This Excel workbook demonstrates professional data analyst skills including pivo
 ### 📋 Workbook Structure
 
 #### 1. **RAW Tab** 📥
+
 - **Purpose**: Raw data import from CSV
 - **Content**: Direct import of `data/sample_breaches.csv`
-- **Formatting**: 
+- **Formatting**:
   - Headers in row 1
   - Data starts from row 2
   - No formulas or calculations
   - Preserve original data integrity
 
 #### 2. **CLEAN Tab** 🧹
+
 - **Purpose**: Cleaned and enhanced data for analysis
-- **Content**: 
+- **Content**:
   - All data from RAW tab
   - Additional calculated columns:
     - `Year` = `=YEAR([@breach_date])`
@@ -28,6 +30,7 @@ This Excel workbook demonstrates professional data analyst skills including pivo
     - `Standard_Industry` = `=XLOOKUP([@industry],industry_map[raw],industry_map[standard])`
 
 #### 3. **industry_map Tab** 🗺️
+
 - **Purpose**: Lookup table for industry standardization
 - **Columns**:
   - `raw`: Original industry names
@@ -36,6 +39,7 @@ This Excel workbook demonstrates professional data analyst skills including pivo
   - `risk_level`: Risk assessment
 
 #### 4. **PIVOT_BreachesByYear Tab** 📈
+
 - **Purpose**: Time series analysis of breaches
 - **Pivot Table**:
   - **Rows**: Year
@@ -44,6 +48,7 @@ This Excel workbook demonstrates professional data analyst skills including pivo
 - **Charts**: Line chart showing breach trends over time
 
 #### 5. **PIVOT_IndustryRecords Tab** 🏭
+
 - **Purpose**: Industry analysis by records exposed
 - **Pivot Table**:
   - **Rows**: Industry
@@ -52,6 +57,7 @@ This Excel workbook demonstrates professional data analyst skills including pivo
 - **Charts**: Stacked bar chart by industry
 
 #### 6. **PIVOT_Geography Tab** 🌍
+
 - **Purpose**: Geographic distribution analysis
 - **Pivot Table**:
   - **Rows**: Country
@@ -60,6 +66,7 @@ This Excel workbook demonstrates professional data analyst skills including pivo
 - **Charts**: Map chart (if available) or column chart
 
 #### 7. **CHARTS Tab** 📊
+
 - **Purpose**: Centralized chart collection
 - **Charts**:
   - Line chart: Breaches by year
@@ -68,6 +75,7 @@ This Excel workbook demonstrates professional data analyst skills including pivo
   - Scatter plot: Breach size vs frequency
 
 #### 8. **Executive_Summary Tab** 👔
+
 - **Purpose**: One-page executive summary
 - **Content**:
   - Key metrics (KPI cards)
@@ -79,6 +87,7 @@ This Excel workbook demonstrates professional data analyst skills including pivo
 ### 🔧 Excel Skills Demonstrated
 
 #### 1. **Pivot Tables** 📊
+
 ```excel
 # Create pivot table from CLEAN data
 Insert > PivotTable > Use CLEAN data
@@ -88,24 +97,28 @@ Insert > PivotTable > Use CLEAN data
 ```
 
 #### 2. **XLOOKUP Formula** 🔍
+
 ```excel
 # Industry standardization
 =XLOOKUP([@industry],industry_map[raw],industry_map[standard])
 ```
 
 #### 3. **Conditional Formatting** 🎨
+
 ```excel
 # Highlight top 10% breach sizes
 Select records_exposed column > Conditional Formatting > Top/Bottom Rules > Top 10%
 ```
 
 #### 4. **Slicers** 🔍
+
 ```excel
 # Add slicers to pivot tables
 PivotTable Tools > Insert Slicer > Select: Industry, Country, Year
 ```
 
 #### 5. **Advanced Formulas** 🧮
+
 ```excel
 # Severity classification
 =IFS([@records_exposed]<=1000,"Low",
@@ -121,41 +134,48 @@ PivotTable Tools > Insert Slicer > Select: Industry, Country, Year
 ### 📋 Step-by-Step Creation Instructions
 
 #### Step 1: Import Raw Data
+
 1. Open Excel
 2. Data > Get Data > From Text/CSV
 3. Select `data/sample_breaches.csv`
 4. Import to new sheet named "RAW"
 
 #### Step 2: Create Clean Data
+
 1. Copy RAW data to new sheet "CLEAN"
 2. Add calculated columns using formulas above
 3. Format as Excel Table (Ctrl+T)
 4. Name table "breach_data"
 
 #### Step 3: Create Industry Lookup
+
 1. New sheet "industry_map"
 2. Add lookup table with columns: raw, standard, category, risk_level
 3. Format as Excel Table named "industry_map"
 
 #### Step 4: Create Pivot Tables
+
 1. Insert > PivotTable from CLEAN data
 2. Create separate sheets for each pivot table
 3. Add appropriate rows, values, and filters
 4. Format pivot tables professionally
 
 #### Step 5: Add Charts
+
 1. Select pivot table data
 2. Insert > Recommended Charts
 3. Choose appropriate chart types
 4. Format charts with consistent theme
 
 #### Step 6: Create Slicers
+
 1. Select pivot table
 2. PivotTable Tools > Insert Slicer
 3. Choose relevant fields
 4. Format slicers consistently
 
 #### Step 7: Executive Summary
+
 1. New sheet "Executive_Summary"
 2. Add KPI cards with key metrics
 3. Insert single chart showing main trend
@@ -182,10 +202,12 @@ PivotTable Tools > Insert Slicer > Select: Industry, Country, Year
 ### 🔄 Data Refresh Instructions
 
 1. **Update Raw Data**:
+
    - Replace RAW tab with new CSV data
    - CLEAN tab will auto-update formulas
 
 2. **Refresh Pivot Tables**:
+
    - Right-click pivot table > Refresh
    - Or Data > Refresh All
 

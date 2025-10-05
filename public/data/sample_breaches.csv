@@ -1,0 +1,12 @@
+id,breach_date,name,industry,country,records_exposed,breach_type,source_url
+1,2022-04-03,Credit 1 Ltd,Financial,US,1663419,Insider,https://krebsonsecurity.com/breach-0001
+2,2020-05-30,Clinic Corp,Healthcare,CA,172914,Insider,https://darkreading.com/breach-0002
+3,2021-12-30,Care 3 Group,Healthcare,FR,16634,Insider,https://darkreading.com/breach-0003
+4,2021-04-12,Hospital Inc,Healthcare,NO,219942,System Error,https://securityweek.com/breach-0004
+5,2021-10-20,Finance Inc,Financial,GB,275732,Insider,https://threatpost.com/breach-0005
+6,2020-05-23,Data Inc,Education,ES,24916,System Error,https://darkreading.com/breach-0006
+7,2021-12-03,Tech Ltd,Transportation,IN,479241,Insider,https://infosecurity-magazine.com/breach-0007
+8,2020-11-02,Shop 2 LLC,Retail,DK,186629,Social Engineering,https://cyberscoop.com/breach-0008
+9,2024-12-31,Cloud 1 Services,Education,IN,415533,Insider,https://cyberscoop.com/breach-0009
+10,2020-10-22,Systems Services,Media,CA,392115,Insider,https://infosecurity-magazine.com/breach-0010
+

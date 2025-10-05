@@ -8,16 +8,16 @@ This directory contains sample data and documentation for the Data Breach Insigh
 
 ### Schema Description
 
-| Column | Type | Description | Example |
-|--------|------|-------------|---------|
-| `id` | INTEGER | Unique identifier | 1 |
-| `breach_date` | DATE | Date of breach incident | 2023-03-15 |
-| `name` | TEXT | Organization name | Acme Corp |
-| `industry` | TEXT | Industry sector | Healthcare |
-| `country` | TEXT | Country code (ISO 3166-1) | US |
-| `records_exposed` | BIGINT | Number of records compromised | 1500000 |
-| `breach_type` | TEXT | Type of breach | Hacking |
-| `source_url` | TEXT | Reference URL | https://example.com/breach-123 |
+| Column            | Type    | Description                   | Example                        |
+| ----------------- | ------- | ----------------------------- | ------------------------------ |
+| `id`              | INTEGER | Unique identifier             | 1                              |
+| `breach_date`     | DATE    | Date of breach incident       | 2023-03-15                     |
+| `name`            | TEXT    | Organization name             | Acme Corp                      |
+| `industry`        | TEXT    | Industry sector               | Healthcare                     |
+| `country`         | TEXT    | Country code (ISO 3166-1)     | US                             |
+| `records_exposed` | BIGINT  | Number of records compromised | 1500000                        |
+| `breach_type`     | TEXT    | Type of breach                | Hacking                        |
+| `source_url`      | TEXT    | Reference URL                 | https://example.com/breach-123 |
 
 ### Data Quality Notes
 
@@ -32,6 +32,7 @@ This directory contains sample data and documentation for the Data Breach Insigh
 ### Primary Sources
 
 1. **Kaggle Data Breaches Dataset**
+
    - **URL**: https://www.kaggle.com/datasets/arindam235/cyber-security-breaches-data
    - **Description**: Comprehensive dataset of cybersecurity breaches from 2004-2023
    - **Size**: ~10,000 records
@@ -39,6 +40,7 @@ This directory contains sample data and documentation for the Data Breach Insigh
    - **Citation**: "Cyber Security Breaches Data" by Arindam, Kaggle, 2023
 
 2. **Privacy Rights Clearinghouse Data Breach Chronology**
+
    - **URL**: https://privacyrights.org/data-breaches
    - **Description**: Chronological database of data breaches since 2005
    - **Size**: ~9,000 records
@@ -80,6 +82,7 @@ python scripts/process_kaggle_data.py --input kaggle_data.csv --output data/brea
 ## 📋 Data Dictionary
 
 ### Industry Categories
+
 - **Healthcare**: Hospitals, clinics, medical records
 - **Financial**: Banks, credit unions, payment processors
 - **Technology**: Software companies, cloud providers
@@ -89,6 +92,7 @@ python scripts/process_kaggle_data.py --input kaggle_data.csv --output data/brea
 - **Other**: Miscellaneous sectors
 
 ### Breach Types
+
 - **Hacking**: External cyber attacks
 - **Insider**: Internal malicious or accidental
 - **Physical**: Theft of physical devices/documents
@@ -97,7 +101,9 @@ python scripts/process_kaggle_data.py --input kaggle_data.csv --output data/brea
 - **Unknown**: Unspecified cause
 
 ### Country Codes
+
 Using ISO 3166-1 alpha-2 standard:
+
 - **US**: United States
 - **GB**: United Kingdom
 - **CA**: Canada
@@ -112,12 +118,14 @@ Using ISO 3166-1 alpha-2 standard:
 ## ⚠️ Legal and Ethical Usage
 
 ### Privacy Considerations
+
 - **No PII**: Sample data contains no personally identifiable information
 - **Synthetic Data**: Generated data for demonstration purposes
 - **Public Sources**: Only publicly available breach information
 - **Anonymized**: Organization names are fictional
 
 ### Usage Guidelines
+
 - ✅ Educational and demonstration purposes
 - ✅ Portfolio and resume projects
 - ✅ Research and analysis
@@ -126,6 +134,7 @@ Using ISO 3166-1 alpha-2 standard:
 - ❌ Malicious or harmful purposes
 
 ### Data Retention
+
 - Sample data: Permanent (synthetic)
 - Real data: Follow source licensing terms
 - Personal data: Not collected or stored
@@ -133,11 +142,13 @@ Using ISO 3166-1 alpha-2 standard:
 ## 🔄 Data Updates
 
 ### Sample Data
+
 - **Frequency**: Static (generated once)
 - **Version**: 1.0
 - **Last Updated**: 2024-01-15
 
 ### Real Data
+
 - **Kaggle**: Updated monthly
 - **PRC**: Updated weekly
 - **HIBP**: Real-time API
@@ -145,6 +156,7 @@ Using ISO 3166-1 alpha-2 standard:
 ## 📞 Support
 
 For questions about data sources or usage:
+
 - Check the main README.md
 - Review the case study in docs/case_study.md
 - Open an issue in the repository

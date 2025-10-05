@@ -12,9 +12,9 @@ services:
       POSTGRES_DB: breach_db
       POSTGRES_USER: breach_user
       POSTGRES_PASSWORD: breach_password
-      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+      POSTGRES_INITDB_ARGS: '--encoding=UTF-8 --lc-collate=C --lc-ctype=C'
     ports:
-      - "5432:5432"
+      - '5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
@@ -22,7 +22,7 @@ services:
     networks:
       - breach_network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U breach_user -d breach_db"]
+      test: ['CMD-SHELL', 'pg_isready -U breach_user -d breach_db']
       interval: 10s
       timeout: 5s
       retries: 5
@@ -37,7 +37,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin123
       PGADMIN_CONFIG_SERVER_MODE: 'False'
     ports:
-      - "8080:80"
+      - '8080:80'
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     networks:
@@ -47,7 +47,7 @@ services:
         condition: service_healthy
     restart: unless-stopped
     profiles:
-      - admin  # Only start with --profile admin
+      - admin # Only start with --profile admin
 
   # Jupyter Notebook (Optional - Data Analysis Environment)
   jupyter:
@@ -57,7 +57,7 @@ services:
       JUPYTER_ENABLE_LAB: 'yes'
       JUPYTER_TOKEN: breach-insights-2024
     ports:
-      - "8888:8888"
+      - '8888:8888'
     volumes:
       - ./notebooks:/home/jovyan/work/notebooks:rw
       - ./data:/home/jovyan/work/data:ro
@@ -70,7 +70,7 @@ services:
         condition: service_healthy
     restart: unless-stopped
     profiles:
-      - analysis  # Only start with --profile analysis
+      - analysis # Only start with --profile analysis
 
 volumes:
   postgres_data:
@@ -81,9 +81,8 @@ volumes:
 networks:
   breach_network:
     driver: bridge
-
 # Usage Examples:
-# 
+#
 # Start only PostgreSQL:
 #   docker-compose up postgres
 #

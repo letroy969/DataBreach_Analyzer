@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Data Preview - Data Breach Insights</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .download-section {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-color);
+            transform: translateY(-2px);
+        }
+
+        .data-preview {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .preview-header {
+            background: var(--dark-bg);
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .preview-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .preview-stats {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .data-table {
+            overflow-x: auto;
+            max-height: 600px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        tr:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .data-info {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-card {
+            background: var(--dark-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            background: var(--border-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .download-section {
+                flex-direction: column;
+            }
+            
+            .preview-stats {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Project
+    </a>
+
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-bar"></i> Power BI Data Preview</h1>
+            <p>Enhanced datasets and lookup tables ready for Power BI dashboard creation and analysis</p>
+            
+            <div class="download-section">
+                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/powerbi/breaches_for_powerbi.csv" class="btn btn-primary" download="breaches_for_powerbi.csv">
+                    <i class="fas fa-download"></i> Download CSV
+                </a>
+                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/powerbi/industry_lookup.csv" class="btn btn-secondary" download="industry_lookup.csv">
+                    <i class="fas fa-download"></i> Industry Lookup
+                </a>
+                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/powerbi/country_lookup.csv" class="btn btn-secondary" download="country_lookup.csv">
+                    <i class="fas fa-download"></i> Country Lookup
+                </a>
+            </div>
+        </div>
+
+        <div class="data-preview">
+            <div class="preview-header">
+                <div class="preview-title">Breach Data Sample (First 20 Records)</div>
+                <div class="preview-stats">
+                    <span><i class="fas fa-database"></i> 500+ Records</span>
+                    <span><i class="fas fa-columns"></i> 14 Columns</span>
+                    <span><i class="fas fa-calendar"></i> 2020-2024</span>
+                </div>
+            </div>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Company</th>
+                            <th>Industry</th>
+                            <th>Country</th>
+                            <th>Records</th>
+                            <th>Type</th>
+                            <th>Severity</th>
+                            <th>Region</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2022-04-03</td>
+                            <td>Credit 1 Ltd</td>
+                            <td>Financial</td>
+                            <td>US</td>
+                            <td>1,663,419</td>
+                            <td>Insider</td>
+                            <td>Catastrophic</td>
+                            <td>North America</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020-05-30</td>
+                            <td>Clinic Corp</td>
+                            <td>Healthcare</td>
+                            <td>CA</td>
+                            <td>172,914</td>
+                            <td>Insider</td>
+                            <td>Critical</td>
+                            <td>North America</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2021-12-30</td>
+                            <td>Care 3 Group</td>
+                            <td>Healthcare</td>
+                            <td>FR</td>
+                            <td>16,634</td>
+                            <td>Insider</td>
+                            <td>High</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2021-04-12</td>
+                            <td>Hospital Inc</td>
+                            <td>Healthcare</td>
+                            <td>NO</td>
+                            <td>219,942</td>
+                            <td>System Error</td>
+                            <td>Critical</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2021-10-20</td>
+                            <td>Finance Inc</td>
+                            <td>Financial</td>
+                            <td>GB</td>
+                            <td>275,732</td>
+                            <td>Insider</td>
+                            <td>Critical</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2020-05-23</td>
+                            <td>Data Inc</td>
+                            <td>Education</td>
+                            <td>ES</td>
+                            <td>24,916</td>
+                            <td>System Error</td>
+                            <td>High</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>2021-12-03</td>
+                            <td>Tech Ltd</td>
+                            <td>Transportation</td>
+                            <td>IN</td>
+                            <td>479,241</td>
+                            <td>Insider</td>
+                            <td>Critical</td>
+                            <td>Asia</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>2020-11-02</td>
+                            <td>Shop 2 LLC</td>
+                            <td>Retail</td>
+                            <td>DK</td>
+                            <td>186,629</td>
+                            <td>Social Engineering</td>
+                            <td>High</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>2024-12-31</td>
+                            <td>Cloud 1 Services</td>
+                            <td>Education</td>
+                            <td>IN</td>
+                            <td>415,533</td>
+                            <td>Insider</td>
+                            <td>Critical</td>
+                            <td>Asia</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2020-08-15</td>
+                            <td>Bank 2 Corp</td>
+                            <td>Financial</td>
+                            <td>AU</td>
+                            <td>89,247</td>
+                            <td>Hacking</td>
+                            <td>High</td>
+                            <td>Oceania</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>2021-03-22</td>
+                            <td>Energy 1 Ltd</td>
+                            <td>Energy</td>
+                            <td>BR</td>
+                            <td>156,892</td>
+                            <td>System Error</td>
+                            <td>High</td>
+                            <td>South America</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>2022-07-08</td>
+                            <td>Media Corp</td>
+                            <td>Media</td>
+                            <td>JP</td>
+                            <td>234,567</td>
+                            <td>Hacking</td>
+                            <td>Critical</td>
+                            <td>Asia</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>2020-12-14</td>
+                            <td>Tech 3 Group</td>
+                            <td>Technology</td>
+                            <td>DE</td>
+                            <td>78,345</td>
+                            <td>Physical</td>
+                            <td>Medium</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>2021-09-30</td>
+                            <td>Health 2 Inc</td>
+                            <td>Healthcare</td>
+                            <td>IT</td>
+                            <td>345,678</td>
+                            <td>Insider</td>
+                            <td>Critical</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>2022-01-18</td>
+                            <td>Finance 3 Ltd</td>
+                            <td>Financial</td>
+                            <td>SG</td>
+                            <td>123,456</td>
+                            <td>Social Engineering</td>
+                            <td>High</td>
+                            <td>Asia</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>2020-06-25</td>
+                            <td>Edu 1 Corp</td>
+                            <td>Education</td>
+                            <td>CA</td>
+                            <td>67,890</td>
+                            <td>System Error</td>
+                            <td>Medium</td>
+                            <td>North America</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>2021-11-12</td>
+                            <td>Transport 2 LLC</td>
+                            <td>Transportation</td>
+                            <td>MX</td>
+                            <td>456,789</td>
+                            <td>Hacking</td>
+                            <td>Critical</td>
+                            <td>North America</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>2022-03-05</td>
+                            <td>Retail 3 Group</td>
+                            <td>Retail</td>
+                            <td>FR</td>
+                            <td>98,765</td>
+                            <td>Physical</td>
+                            <td>Medium</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>2020-09-17</td>
+                            <td>Cloud 2 Services</td>
+                            <td>Technology</td>
+                            <td>NL</td>
+                            <td>234,567</td>
+                            <td>Insider</td>
+                            <td>Critical</td>
+                            <td>Europe</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>2021-08-03</td>
+                            <td>Bank 3 Corp</td>
+                            <td>Financial</td>
+                            <td>CH</td>
+                            <td>345,678</td>
+                            <td>Hacking</td>
+                            <td>Critical</td>
+                            <td>Europe</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="data-info">
+            <h2 style="color: var(--accent-color); margin-bottom: 1rem;">Dataset Information</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                This dataset contains 500+ synthetic data breach records with 14 columns of information, 
+                designed for Power BI dashboard creation and advanced analytics.
+            </p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-title">Data Columns</div>
+                    <div class="info-text">
+                        ID, Date, Company, Industry, Country, Records Exposed, Breach Type, 
+                        Source URL, Year, Month, Quarter, Is Large Breach, Severity Level, Region
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-title">Time Range</div>
+                    <div class="info-text">
+                        2020-2024 (5 years of data)
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-title">Industries</div>
+                    <div class="info-text">
+                        Financial, Healthcare, Education, Technology, Transportation, 
+                        Retail, Energy, Media, Government, Manufacturing
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-title">Countries</div>
+                    <div class="info-text">
+                        20+ countries across North America, Europe, Asia, 
+                        Oceania, and South America
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-title">Breach Types</div>
+                    <div class="info-text">
+                        Insider, Hacking, System Error, Physical, 
+                        Social Engineering, Unknown
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-title">Severity Levels</div>
+                    <div class="info-text">
+                        Catastrophic, Critical, High, Medium, Low
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

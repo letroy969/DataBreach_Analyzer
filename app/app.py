@@ -18,16 +18,11 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from data_loader import DataLoader
 from visuals import ChartBuilder
-from utils import format_number, format_currency, calculate_percentage_change, create_summary_stats
-from insights import AIInsights
+from ai_insights import AIInsights
 import io
 
-# Try to import xlsxwriter, fallback to openpyxl if not available
-try:
-    import xlsxwriter
-    HAS_XLSXWRITER = True
-except ImportError:
-    HAS_XLSXWRITER = False
+# Set xlsxwriter flag to False for Streamlit Cloud compatibility
+HAS_XLSXWRITER = False
 
 # Page configuration
 st.set_page_config(

@@ -103,6 +103,21 @@
             transform: translateY(-2px);
         }
 
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .fa-spin {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         .data-preview {
             background: var(--card-bg);
             border-radius: 16px;
@@ -258,9 +273,9 @@
             <p>Enhanced datasets and lookup tables ready for Power BI dashboard creation and analysis. Download the complete Excel workbook with all data and analysis tools.</p>
             
             <div class="download-section">
-                <a href="https://github.com/letroy969/Databreach_insight-report/raw/main/excel/breach_analysis.xlsx" class="btn btn-primary" download="breach_analysis.xlsx">
+                <button onclick="downloadExcel()" class="btn btn-primary">
                     <i class="fas fa-file-excel"></i> Download Excel Workbook
-                </a>
+                </button>
                 <a href="csv-download.html" class="btn btn-secondary">
                     <i class="fas fa-file-csv"></i> Download CSV Files
                 </a>
@@ -869,6 +884,39 @@
                 }
             });
         });
+
+        // Download Excel workbook function
+        function downloadExcel() {
+            const button = event.target;
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+            button.disabled = true;
+            
+            // Try multiple download methods for better compatibility
+            const downloadUrl = 'https://github.com/letroy969/Databreach_insight-report/raw/main/excel/breach_analysis.xlsx';
+            
+            // Method 1: Direct download with forced filename
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = 'breach_analysis.xlsx';
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Method 2: Fallback - open in new tab if download doesn't work
+            setTimeout(() => {
+                window.open(downloadUrl, '_blank');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                }, 3000);
+            }, 1000);
+        }
     </script>
 </body>
 </html>

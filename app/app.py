@@ -13,8 +13,8 @@ st.title('Data Breach Analyzer Dashboard')
 
 # Sidebar for user input
 st.sidebar.header('User Input Features')
-.databricks_url = st.sidebar.text_input('Databricks API URL', 'https://your-databricks-url')
-.tableau_url = st.sidebar.text_input('Tableau API URL', 'https://your-tableau-url')
+databricks_url = st.sidebar.text_input('Databricks API URL', 'https://your-databricks-url')
+tableau_url = st.sidebar.text_input('Tableau API URL', 'https://your-tableau-url')
 
 # Connect to Databricks and fetch data
 @st.cache
